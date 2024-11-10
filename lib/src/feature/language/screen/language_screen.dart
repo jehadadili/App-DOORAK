@@ -1,10 +1,9 @@
-import 'package:doorak/src/core/extension/extension_navgter.dart';
-import 'package:doorak/src/core/style/text_styles/text_styles.dart';
-import 'package:doorak/src/core/widgets/background_container.dart';
-import 'package:doorak/src/feature/auth/presntation/view/login/screen/login_screen.dart';
-import 'package:doorak/src/feature/language/widgets/circular_arrow_button.dart';
+import 'package:doorak/src/core/style/button/custom_buttom_light.dart';
+import 'package:doorak/src/core/style/text/text.dart';
+import 'package:doorak/src/core/them/them_cubit/theme_cubit.dart';
 import 'package:doorak/src/feature/language/widgets/language_option.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LanguageScreen extends StatefulWidget {
@@ -26,15 +25,16 @@ class _LanguageScreenState extends State<LanguageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BackgroundContainer(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 25.w),
         child: Column(
           children: [
-            SizedBox(height: MediaQuery.of(context).size.height * 0.25),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.15),
             Text(
-              "Dorak",
-              style: TextStyles.p96,
+              AppText.appName,
+              style: Theme.of(context).textTheme.labelLarge,
             ),
-            SizedBox(height: 71.h),
+            SizedBox(height: 56.h),
             LanguageOption(
               language: "English",
               onTap: () => _onLanguageSelected("English"),
@@ -46,13 +46,12 @@ class _LanguageScreenState extends State<LanguageScreen> {
               onTap: () => _onLanguageSelected("العربية"),
               isSelected: selectedLanguage == "العربية",
             ),
-            const Spacer(),
-            CircularArrowButton(
-              onPressed: () {
-                context.pushReplacement(pushReplacement: const LoginScreen());
-              },
+            SizedBox(height: 72.h),
+            CustomButtomLight(
+              onPressed: () {},
+              text: AppText.confirmEN,
             ),
-            SizedBox(height: 40.h),
+            SizedBox(height: 100.h),
           ],
         ),
       ),

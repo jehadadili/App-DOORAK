@@ -1,7 +1,6 @@
-import 'package:doorak/src/core/style/text_styles/text_styles.dart';
+import 'package:doorak/src/core/style/color/color_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:doorak/src/core/style/color/color_app.dart';
 
 class LanguageOption extends StatelessWidget {
   final String language;
@@ -23,15 +22,19 @@ class LanguageOption extends StatelessWidget {
         width: 343.w,
         height: 80.h,
         decoration: BoxDecoration(
-          color: ColorApp.pink.withOpacity(0.2),
+          color: isSelected
+              ? Theme.of(context).colorScheme.primary
+              : Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(6.r),
-          border:
-              isSelected ? Border.all(color: Colors.white, width: 2.w) : null,
         ),
         child: Center(
           child: Text(
             language,
-            style: TextStyles.w40_80,
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  color: isSelected
+                      ? ColorApp.white
+                      : ColorApp.white.withOpacity(0.40),
+                ),
           ),
         ),
       ),
