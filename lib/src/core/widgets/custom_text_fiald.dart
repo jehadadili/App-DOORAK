@@ -12,9 +12,8 @@ class CustomTextFieldWidgets extends StatelessWidget {
     required this.validator,
     this.controller,
     this.keyboardType,
-    required this.width,
     required this.height,
-    required this.horizontal,
+    this.width,
   });
 
   final String hintText;
@@ -23,52 +22,58 @@ class CustomTextFieldWidgets extends StatelessWidget {
   final String? Function(String?) validator;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
-  final double width;
   final double height;
-  final double horizontal;
+  final double? width;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: horizontal.w),
-      child: SizedBox(
-        width: width.w,
-        height: height.h,
-        child: TextFormField(
-          autovalidateMode: AutovalidateMode.onUserInteraction,
-          style: const TextStyle(color: ColorApp.black),
-          controller: controller,
-          validator: validator,
-          keyboardType: keyboardType,
-          decoration: InputDecoration(
-            fillColor: ColorApp.greydark,
-            filled: true,
-            focusedBorder: CustomBorder.defaultBorder(
-                color: ColorApp.white.withOpacity(0.8), width: 1, radius: 15),
-            errorBorder: CustomBorder.defaultBorder(
-              color: ColorApp.red,
-              width: 1,
-              radius: 5,
-            ),
-            focusedErrorBorder: CustomBorder.defaultBorder(
-              color: ColorApp.red,
-              width: 1,
-              radius: 5,
-            ),
-            prefixIcon: prefixIcon,
-            prefixIconColor: ColorApp.white.withOpacity(0.25),
-            hintText: hintText,
-            hintStyle: TextStyle(
-              color: ColorApp.white.withOpacity(0.25),
-              fontSize: 16.sp,
-              fontWeight: FontWeight.w500,
-            ),
-            labelText: labelText,
-            labelStyle: TextStyle(
-              color: ColorApp.white.withOpacity(0.25),
-              fontSize: 16.sp,
-              fontWeight: FontWeight.w500,
-            ),
+    return SizedBox(
+      width: width ?? MediaQuery.sizeOf(context).width,
+      height: height.h,
+      child: TextFormField(
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        style: Theme.of(context)
+            .textTheme
+            .bodySmall
+            ?.copyWith(color: ColorApp.black.withOpacity(0.25)),
+        controller: controller,
+        validator: validator,
+        keyboardType: keyboardType,
+        decoration: InputDecoration(
+          fillColor: ColorApp.greydark.withOpacity(0.10),
+          filled: true,
+          enabledBorder: CustomBorder.defaultBorder(
+            color: Colors.transparent,
+            width: 0,
+            radius: 6,
           ),
+          focusedBorder: CustomBorder.defaultBorder(
+            color: ColorApp.white.withOpacity(0.8),
+            width: 1,
+            radius: 6,
+          ),
+          errorBorder: CustomBorder.defaultBorder(
+            color: ColorApp.red,
+            width: 1,
+            radius: 6,
+          ),
+          focusedErrorBorder: CustomBorder.defaultBorder(
+            color: ColorApp.red,
+            width: 1,
+            radius: 6,
+          ),
+          border: InputBorder.none, // لإزالة الخط السفلي تمامًا
+          prefixIcon: prefixIcon,
+          prefixIconColor: ColorApp.black.withOpacity(0.25),
+          hintText: hintText,
+          hintStyle: Theme.of(context)
+              .textTheme
+              .bodySmall
+              ?.copyWith(color: ColorApp.black.withOpacity(0.25)),
+          labelText: labelText,
+          labelStyle: Theme.of(context)
+              .textTheme
+              .bodySmall
+              ?.copyWith(color: ColorApp.black.withOpacity(0.25)),
         ),
       ),
     );

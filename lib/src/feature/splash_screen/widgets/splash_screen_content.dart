@@ -1,5 +1,6 @@
 import 'package:doorak/src/core/style/color/color_app.dart';
 import 'package:doorak/src/core/style/text/text.dart';
+import 'package:doorak/src/core/widgets/custom_widget_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:doorak/src/core/style/image/image_app.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,15 +15,35 @@ class SplashScreenContent extends StatelessWidget {
         Expanded(
           flex: 6,
           child: Align(
-            child: Text(
-              AppText.appName,
-              style: Theme.of(context)
-                  .textTheme
-                  .labelLarge
-                  ?.copyWith(color: ColorApp.white),
+            child: Column(
+
+              children: [
+                SizedBox(
+                  height: 140.h,
+                )
+
+                ,
+                Text(
+                  AppText.appName,
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelLarge
+                      ?.copyWith(color: ColorApp.white),
+                ),
+                SizedBox(
+                  height: 30.h,
+                ),
+                CustomWidgetLoading(
+                  size: 80.sp,
+                  color: ColorApp.white,
+                ),
+              ],
             ),
+
           ),
         ),
+
+
         Padding(
           padding: EdgeInsets.only(right: 210.w),
           child: Align(

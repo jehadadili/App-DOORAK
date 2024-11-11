@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:doorak/src/core/style/image/image_app.dart';
 
 class BackgroundContainer extends StatelessWidget {
-  final Widget child;
-
-  const BackgroundContainer({super.key, required this.child});
+  const BackgroundContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +15,6 @@ class BackgroundContainer extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: child,
     );
   }
 }

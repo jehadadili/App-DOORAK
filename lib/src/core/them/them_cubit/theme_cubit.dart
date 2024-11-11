@@ -15,7 +15,6 @@ class ThemeCubit extends Cubit<Themestate> {
         state == Themestate.light ? Themestate.dark : Themestate.light;
     CasheHelper.saveData(key: keytheme, value: newstate == Themestate.dark);
     emit(newstate);
-    print(newstate == Themestate.dark);
   }
 
   ThemeData get themedata {

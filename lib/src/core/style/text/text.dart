@@ -43,7 +43,7 @@ class AppText {
   static const String hintPhoneAR = "يرجى إدخال رقم هاتفك";
 
   // Password
-  static const String labelPasswordEN = "Password";
+  static const String labelPasswordEN = "|  Password";
   static const String labelPasswordAR = "كلمة المرور";
   static const String hintPasswordEN = "Please enter your password";
   static const String hintPasswordAR = "يرجى إدخال كلمة المرور";
@@ -157,8 +157,10 @@ class AppText {
   static const String serviceAR = "الخدمة:";
   static const String reservationForEN = "Reservation for:";
   static const String reservationForAR = "الحجز لـ:";
-  static const String reservationDateTimeEN = "Tuesday - 22/04/2025 12:00 - 13:00";
-  static const String reservationDateTimeAR = "الثلاثاء - ٢٢/٠٤/٢٠٢٥ ١٢:٠٠ - ١٣:٠٠";
+  static const String reservationDateTimeEN =
+      "Tuesday - 22/04/2025 12:00 - 13:00";
+  static const String reservationDateTimeAR =
+      "الثلاثاء - ٢٢/٠٤/٢٠٢٥ ١٢:٠٠ - ١٣:٠٠";
   static const String yourNumberEN = "Your Number is:";
   static const String yourNumberAR = "رقمك هو:";
   static const String peopleWaitingEN = "People Waiting:";

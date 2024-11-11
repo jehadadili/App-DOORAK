@@ -14,16 +14,17 @@ class SplachScreen extends StatefulWidget {
 class _SplachScreenState extends State<SplachScreen> {
   @override
   void initState() {
-    Future.delayed(
-      const Duration(seconds: 3),
-    ).then(
-      (value) {
-        if (mounted) {
-          context.pushReplacement(pushReplacement: const LanguageScreen());
-        }
-      },
-    );
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(
+        const Duration(seconds: 3),
+        () {
+          if (mounted) {
+            context.pushReplacement(pushReplacement: const LanguageScreen());
+          }
+        },
+      );
+    });
   }
 
   @override

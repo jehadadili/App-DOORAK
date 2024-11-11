@@ -3,16 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButtomLight extends StatelessWidget {
-  const CustomButtomLight({super.key, required this.text, this.onPressed});
+  const CustomButtomLight(
+      {super.key,
+      required this.text,
+      this.onPressed,
+      required this.horizontal});
   final String text;
   final void Function()? onPressed;
-
+  final double horizontal;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 17.w),
+      padding: EdgeInsets.symmetric(horizontal: horizontal.w),
       child: SizedBox(
-        width: 309.w,
+        width: MediaQuery.sizeOf(context).width,
         height: 50.h,
         child: ElevatedButton(
           onPressed: onPressed,
