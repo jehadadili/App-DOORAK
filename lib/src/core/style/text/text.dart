@@ -13,12 +13,14 @@ class AppText {
   static const String loginInfoEN = "Enter your login information";
   static const String loginInfoAR = "أدخل معلومات تسجيل الدخول";
 
+  static const String registerEN = "Register";
+  static const String registerAR = "سجل";
   static const String signUpEN = "Sign Up";
   static const String signUpAR = "إنشاء حساب";
-  static const String registerEN = "Create an account";
-  static const String registerAR = "إنشاء حساب جديد";
+  static const String createregisterEN = "Create an account";
+  static const String createregisterAR = "إنشاء حساب جديد";
 
-  static const String forgotPasswordEN = "Forgot Password";
+  static const String forgotPasswordEN = "Forgot Password ?";
   static const String forgotPasswordAR = "نسيت كلمة المرور";
 
   static const String rememberMeEN = "Remember me";
@@ -43,7 +45,7 @@ class AppText {
   static const String hintPhoneAR = "يرجى إدخال رقم هاتفك";
 
   // Password
-  static const String labelPasswordEN = "|  Password";
+  static const String labelPasswordEN = "Password";
   static const String labelPasswordAR = "كلمة المرور";
   static const String hintPasswordEN = "Please enter your password";
   static const String hintPasswordAR = "يرجى إدخال كلمة المرور";

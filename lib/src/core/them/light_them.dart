@@ -11,7 +11,20 @@ ThemeData lightThem() {
       primary: ColorApp.blue,
       secondary: ColorApp.greydark.withOpacity(0.4),
     ),
-    
+    cardColor: ColorApp.black.withOpacity(0.10),
+    primaryTextTheme: TextTheme(
+      titleMedium:
+          StyleTextLight.titleMediumwhite22W500.copyWith(color: ColorApp.black),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      fillColor: ColorApp.greydark.withOpacity(0.10),
+      hintStyle: StyleTextLight.bodysmailwihte14W500
+          .copyWith(color: ColorApp.black.withOpacity(0.25)),
+      labelStyle: StyleTextLight.bodysmailwihte14W500
+          .copyWith(color: ColorApp.black.withOpacity(0.25)),
+      prefixIconColor: ColorApp.black.withOpacity(0.25),
+      suffixIconColor: ColorApp.black.withOpacity(0.25),
+    ),
     textTheme: TextTheme(
       bodySmall: StyleTextLight.bodysmailwihte14W500,
       displayLarge: StyleTextLight.displayLargewhite30W400,

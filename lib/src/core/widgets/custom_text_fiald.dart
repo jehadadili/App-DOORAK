@@ -14,6 +14,8 @@ class CustomTextFieldWidgets extends StatelessWidget {
     this.keyboardType,
     required this.height,
     this.width,
+    this.obscureText,
+    this.suffixIcon,
   });
 
   final String hintText;
@@ -24,6 +26,8 @@ class CustomTextFieldWidgets extends StatelessWidget {
   final TextInputType? keyboardType;
   final double height;
   final double? width;
+  final bool? obscureText;
+  final Widget? suffixIcon;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -37,9 +41,10 @@ class CustomTextFieldWidgets extends StatelessWidget {
             ?.copyWith(color: ColorApp.black.withOpacity(0.25)),
         controller: controller,
         validator: validator,
+        obscureText: obscureText ?? true,
         keyboardType: keyboardType,
         decoration: InputDecoration(
-          fillColor: ColorApp.greydark.withOpacity(0.10),
+          fillColor: Theme.of(context).inputDecorationTheme.fillColor,
           filled: true,
           enabledBorder: CustomBorder.defaultBorder(
             color: Colors.transparent,
@@ -61,19 +66,17 @@ class CustomTextFieldWidgets extends StatelessWidget {
             width: 1,
             radius: 6,
           ),
+
           border: InputBorder.none, // لإزالة الخط السفلي تمامًا
           prefixIcon: prefixIcon,
-          prefixIconColor: ColorApp.black.withOpacity(0.25),
+          prefixIconColor:
+              Theme.of(context).inputDecorationTheme.prefixIconColor,
+          suffixIcon: suffixIcon,
+          suffixIconColor: Theme.of(context).inputDecorationTheme.suffixIconColor,
           hintText: hintText,
-          hintStyle: Theme.of(context)
-              .textTheme
-              .bodySmall
-              ?.copyWith(color: ColorApp.black.withOpacity(0.25)),
+          hintStyle: Theme.of(context).inputDecorationTheme.hintStyle,
           labelText: labelText,
-          labelStyle: Theme.of(context)
-              .textTheme
-              .bodySmall
-              ?.copyWith(color: ColorApp.black.withOpacity(0.25)),
+          labelStyle: Theme.of(context).inputDecorationTheme.labelStyle,
         ),
       ),
     );

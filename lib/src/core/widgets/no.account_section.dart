@@ -1,31 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:doorak/src/core/style/text/text.dart';
 import 'package:doorak/src/core/style/color/color_app.dart';
 
 class NoAccountSection extends StatelessWidget {
-  const NoAccountSection({super.key});
-
+  const NoAccountSection(
+      {super.key, required this.text1, required this.text2, this.onPressed});
+  final String text1;
+  final String text2;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 43.w),
+      padding: EdgeInsets.symmetric(horizontal: 40.w),
       child: Row(
         children: [
           Text(
-            AppText.noAccountEN,
-            style: Theme.of(context)
-                .textTheme
-                .bodySmall
-                ?.copyWith(color: ColorApp.black.withOpacity(0.25)),
+            text1,
+            style: Theme.of(context).inputDecorationTheme.hintStyle,
           ),
           SizedBox(
-            width: 10.w,
+            width: 5.w,
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: onPressed,
             child: Text(
-              AppText.signUpEN,
+              text2,
               style: Theme.of(context)
                   .textTheme
                   .bodySmall
