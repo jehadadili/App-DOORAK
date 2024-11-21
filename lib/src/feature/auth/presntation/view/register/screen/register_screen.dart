@@ -29,7 +29,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: 50.h,
+              height: 70.h,
             ),
             Text(
               AppText.appName,
@@ -63,12 +63,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       text: AppText.registerEN,
                       onPressed: () {},
                     ),
-                    SizedBox(
-                      height: 15.h,
-                    ),
+                    SizedBox(height: 15.h),
                     NoAccountSection(
                       text1: AppText.alreadyAccountEN,
-                      text2: AppText.signUpEN,
+                      text2: AppText.loginEN,
                       onPressed: () {
                         context.pushReplacement(
                             pushReplacement: const LoginScreen());

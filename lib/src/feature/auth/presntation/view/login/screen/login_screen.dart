@@ -32,18 +32,17 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 70.h), // المسافة العلوية
+              SizedBox(height: 60.h), // المسافة العلوية
               Text(
                 AppText.appName,
                 style: Theme.of(context).textTheme.labelLarge,
               ),
-              SizedBox(height: 20.h),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25.w),
+                padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 20.h),
                 child: Container(
-                  width: double.infinity,  // يجعل العرض ملائم لحجم الشاشة
-                  padding: EdgeInsets.symmetric(vertical: 20.h),  // مسافة رأسية داخل الـ Container
-                  margin: EdgeInsets.only(bottom: 50.h),  // مسافة من الأسفل
+                  width: double.infinity,
+                  padding: EdgeInsets.symmetric(vertical: 20.h),
+                  margin: EdgeInsets.only(bottom: 50.h),
                   decoration: BoxDecoration(
                     color: Theme.of(context).cardColor,
                     borderRadius: BorderRadius.circular(6.r),

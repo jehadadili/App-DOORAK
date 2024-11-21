@@ -10,32 +10,27 @@ class NoAccountSection extends StatelessWidget {
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 40.w),
-      child: Row(
-        children: [
-          Text(
-            text1,
-            style: Theme.of(context).inputDecorationTheme.hintStyle,
+    return OverflowBar(
+      spacing: 5,
+      children: [
+        Text(
+          text1,
+          style: Theme.of(context).inputDecorationTheme.hintStyle,
+        ),
+        TextButton(
+          onPressed: onPressed,
+          child: Text(
+            text2,
+            style: Theme.of(context)
+                .textTheme
+                .bodySmall
+                ?.copyWith(color: ColorApp.primarycolor),
           ),
-          SizedBox(
-            width: 5.w,
-          ),
-          TextButton(
-            onPressed: onPressed,
-            child: Text(
-              text2,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall
-                  ?.copyWith(color: ColorApp.primarycolor),
-            ),
-          ),
-          SizedBox(
-            height: 20.h,
-          ),
-        ],
-      ),
+        ),
+        SizedBox(
+          height: 20.h,
+        ),
+      ],
     );
   }
 }
