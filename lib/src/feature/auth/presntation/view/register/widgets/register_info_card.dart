@@ -49,7 +49,6 @@ class RegisterInfoCard extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 17.w),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
                   width: 85.w,
@@ -69,16 +68,21 @@ class RegisterInfoCard extends StatelessWidget {
                               Theme.of(context).inputDecorationTheme.hintStyle),
                     ],
                   )),
-              CustomTextFieldWidgets(
-                height: 40,
-                width: 180.w,
-                labelText: AppText.labelPhoneEN,
-                controller: usernameController,
-                hintText: AppText.hintPhoneEN,
-                keyboardType: TextInputType.phone,
-                validator: (p0) {
-                  return null;
-                },
+              SizedBox(
+                width: 5.w,
+              ),
+              Expanded(
+                child: CustomTextFieldWidgets(
+                  height: 40,
+                  width: 180.w,
+                  labelText: AppText.labelPhoneEN,
+                  controller: usernameController,
+                  hintText: AppText.hintPhoneEN,
+                  keyboardType: TextInputType.phone,
+                  validator: (p0) {
+                    return null;
+                  },
+                ),
               ),
             ],
           ),

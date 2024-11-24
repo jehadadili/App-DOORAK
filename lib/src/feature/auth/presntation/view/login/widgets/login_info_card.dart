@@ -18,14 +18,13 @@ class LoginInfoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 10.h),
         Text(AppText.loginInfoEN,
+            textAlign: TextAlign.center,
             style: Theme.of(context).primaryTextTheme.titleMedium),
         SizedBox(height: 20.h),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 17.w),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
                   width: 85.w,
@@ -45,16 +44,21 @@ class LoginInfoCard extends StatelessWidget {
                               Theme.of(context).inputDecorationTheme.hintStyle),
                     ],
                   )),
-              CustomTextFieldWidgets(
-                height: 40,
-                width: 180.w,
-                labelText: AppText.labelPhoneEN,
-                controller: phoneController,
-                hintText: AppText.hintPhoneEN,
-                keyboardType: TextInputType.phone,
-                validator: (p0) {
-                  return null;
-                },
+              SizedBox(
+                width: 5.w,
+              ),
+              Expanded(
+                child: CustomTextFieldWidgets(
+                  height: 40,
+                  width: 180.w,
+                  labelText: AppText.labelPhoneEN,
+                  controller: phoneController,
+                  hintText: AppText.hintPhoneEN,
+                  keyboardType: TextInputType.phone,
+                  validator: (p0) {
+                    return null;
+                  },
+                ),
               ),
             ],
           ),

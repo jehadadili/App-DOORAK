@@ -7,9 +7,10 @@ class IconApp {
   static const event = "assets/icons/event.png";
   static const arrowoutward = Icons.arrow_outward;
   static const add = Icons.add;
-  static const home = Icons.home;
+  static const notifications = Icons.notifications;
+  static const home = "assets/icons/Home.png";
   static const location = "assets/icons/Location.png";
-  static const personpin = Icons.person_pin;
+  static const personpin = "assets/icons/user.png";
   static const university = "assets/icons/University.png";
   static const physical = "assets/icons/Physical_Gallery.png";
   static const hospital = "assets/icons/Hospital.png";

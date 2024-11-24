@@ -4,15 +4,32 @@ import 'package:flutter/material.dart';
 
 ThemeData darkThem() {
   return ThemeData(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: ColorApp.blakandgrey.withOpacity(0.72),
+      selectedItemColor: ColorApp.blakandgrey.withOpacity(0.60),
+    ),
+    appBarTheme: AppBarTheme(
+      centerTitle: true,
+      backgroundColor: ColorApp.black.withOpacity(0.15),
+      titleTextStyle: StyleTextDark.displayLargewhite30W400.copyWith(
+        fontWeight: FontWeight.w800,
+        color: ColorApp.primarycolor,
+      ),
+    ),
     brightness: Brightness.dark,
     fontFamily: "Lato",
     scaffoldBackgroundColor: ColorApp.black,
     colorScheme: ColorScheme.dark(
+      surface: ColorApp.primarycolor.withOpacity(0.26),
       primary: ColorApp.primarycolor,
       secondary: ColorApp.greydark.withOpacity(0.4),
+      onPrimary: ColorApp.blue.withOpacity(0.41),
+      surfaceContainer: ColorApp.white2.withOpacity(0.15),
     ),
     cardColor: ColorApp.white.withOpacity(0.05),
     primaryTextTheme: TextTheme(
+      displayLarge: StyleTextDark.displayLargewhite30W400
+          .copyWith(color: ColorApp.white, fontWeight: FontWeight.w800),
       titleMedium:
           StyleTextDark.titleMediumwhite22W500.copyWith(color: ColorApp.white),
     ),
@@ -24,8 +41,7 @@ ThemeData darkThem() {
       suffixIconColor: ColorApp.white.withOpacity(0.25),
     ),
     textTheme: TextTheme(
-      bodyLarge:
-          StyleTextDark.bodyLargewhite46W800.copyWith(color: Colors.black),
+      bodyLarge: StyleTextDark.bodyLargewhite46W800,
       bodySmall: StyleTextDark.bodysmailwihte14W500,
       displayLarge: StyleTextDark.displayLargewhite30W400,
       displayMedium: StyleTextDark.displayMediumpink26W900,

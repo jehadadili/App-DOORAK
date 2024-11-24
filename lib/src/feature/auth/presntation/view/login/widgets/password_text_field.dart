@@ -47,28 +47,39 @@ class _PassWordTextFieldState extends State<PassWordTextField> {
         SizedBox(height: 6.h),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 5.w),
-          child: Row(
-            children: [
-              Checkbox(
-                value: isVisible,
-                onChanged: (value) {
-                  isVisible = value!;
-                  setState(() {});
-                },
-              ),
-              Text(
-                AppText.rememberMeEN,
-                style: Theme.of(context).inputDecorationTheme.hintStyle,
-              ),
-              const Spacer(),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  AppText.forgotPasswordEN,
-                  style: Theme.of(context).inputDecorationTheme.hintStyle,
+          child: FittedBox(
+            child: Row(
+              children: [
+                Checkbox(
+                  value: isVisible,
+                  onChanged: (value) {
+                    isVisible = value!;
+                    setState(() {});
+                  },
                 ),
-              ),
-            ],
+                FittedBox(
+                  child: Row(
+                    children: [
+                      Text(
+                        AppText.rememberMeEN,
+                        style: Theme.of(context).inputDecorationTheme.hintStyle,
+                      ),
+                      SizedBox(
+                        width: 30.w,
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          AppText.forgotPasswordEN,
+                          style:
+                              Theme.of(context).inputDecorationTheme.hintStyle,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         )
       ],

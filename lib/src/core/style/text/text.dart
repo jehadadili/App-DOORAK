@@ -57,8 +57,8 @@ class AppText {
   static const String hintConfirmPasswordAR = "يرجى تأكيد كلمة المرور";
 
   // Home Page
-  static const String welcomeBackEN = "Welcome Back, Ahmad!";
-  static const String welcomeBackAR = "مرحبًا بعودتك، أحمد!";
+  static const String welcomeBackEN = "Welcome Back, Jehad!";
+  static const String welcomeBackAR = "مرحبًا بعودتك، جهاد!";
   static const String newTicketEN = "+ New Ticket";
   static const String newTicketAR = "+ تذكرة جديدة";
   static const String manageTicketsEN = "Manage your tickets";

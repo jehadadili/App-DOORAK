@@ -16,13 +16,8 @@ class SplashScreenContent extends StatelessWidget {
           flex: 6,
           child: Align(
             child: Column(
-
               children: [
-                SizedBox(
-                  height: 140.h,
-                )
-
-                ,
+                const Spacer(),
                 Text(
                   AppText.appName,
                   style: Theme.of(context)
@@ -39,11 +34,11 @@ class SplashScreenContent extends StatelessWidget {
                 ),
               ],
             ),
-
           ),
         ),
-
-
+        SizedBox(
+          height: 30.h,
+        ),
         Padding(
           padding: EdgeInsets.only(right: 210.w),
           child: Align(
@@ -57,7 +52,7 @@ class SplashScreenContent extends StatelessWidget {
           ImageApp.logo,
           width: 278.w,
         ),
-        SizedBox(height: 67.h),
+        SizedBox(height: MediaQuery.sizeOf(context).height * 0.2),
       ],
     );
   }

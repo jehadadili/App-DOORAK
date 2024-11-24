@@ -4,15 +4,32 @@ import 'package:flutter/material.dart';
 
 ThemeData lightThem() {
   return ThemeData(
+      
+
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: ColorApp.primarycolor,
+      selectedItemColor: ColorApp.white,
+    ),
+    appBarTheme: AppBarTheme(
+      centerTitle: true,
+      color: ColorApp.primarycolor,
+      titleTextStyle: StyleTextLight.displayLargewhite30W400.copyWith(
+        fontWeight: FontWeight.w800,
+      ),
+    ),
     brightness: Brightness.light,
     fontFamily: "Lato",
     scaffoldBackgroundColor: ColorApp.white,
     colorScheme: ColorScheme.light(
+      surface: ColorApp.primarycolor,
       primary: ColorApp.blue,
       secondary: ColorApp.greydark.withOpacity(0.4),
+      onPrimary: ColorApp.blue,
+      surfaceContainer: ColorApp.blakandgrey.withOpacity(0.72),
     ),
     cardColor: ColorApp.black.withOpacity(0.10),
     primaryTextTheme: TextTheme(
+      displayLarge:  StyleTextLight.displayLargewhite30W400.copyWith(color: ColorApp.black,fontWeight: FontWeight.w800) ,
       titleMedium:
           StyleTextLight.titleMediumwhite22W500.copyWith(color: ColorApp.black),
     ),
@@ -27,6 +44,7 @@ ThemeData lightThem() {
     ),
     textTheme: TextTheme(
       bodySmall: StyleTextLight.bodysmailwihte14W500,
+       bodyLarge: StyleTextLight.bodyLargewhite46W800,
       displayLarge: StyleTextLight.displayLargewhite30W400,
       displayMedium: StyleTextLight.displayMediumpink26W900,
       displaySmall: StyleTextLight.displaySmallwihte18W500,

@@ -23,7 +23,7 @@ class LanguageOption extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 25.w),
         child: Container(
-          height: 80.h,
+          height: 70.h,
           decoration: BoxDecoration(
             color: isSelected
                 ? theme.colorScheme.primary
