@@ -38,7 +38,7 @@ class _PassWordTextFieldState extends State<PassWordTextField> {
             prefixIcon: const Icon(IconApp.lock),
             controller: widget.passwordController,
             hintText: AppText.hintPhoneEN,
-            keyboardType: TextInputType.phone,
+            keyboardType: TextInputType.visiblePassword,
             validator: (p0) {
               return null;
             },

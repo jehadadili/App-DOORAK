@@ -10,8 +10,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = MyBlocObserver();
   await CasheHelper.init();
-  runApp(DevicePreview(
-    enabled: !kReleaseMode,
+  runApp(
+    DevicePreview(
+   enabled: !kReleaseMode,
     builder: (context) =>
-    const AppDoorak() ));
+    const AppDoorak() ) );
 }

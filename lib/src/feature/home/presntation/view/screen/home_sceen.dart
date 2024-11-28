@@ -22,7 +22,7 @@ class HomeSceen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: MediaQuery.sizeOf(context).height * 0.06,
+              height: MediaQuery.sizeOf(context).height * 0.03,
             ),
             Center(
               child: Text(

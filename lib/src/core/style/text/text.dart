@@ -121,30 +121,26 @@ class AppText {
   // Service Page
   static const String chooseServiceEN = "Choose a service";
   static const String chooseServiceAR = "اختر خدمة";
-  static const List<String> servicesEN = [
-    "Service 1",
-    "Service 2",
-    "Service 3",
-    "Service 4",
-    "Service 5",
-    "Service 6",
-    "Service 7",
-    "Service 8",
-    "Service 9",
-    "Service 10"
-  ];
-  static const List<String> servicesAR = [
-    "خدمة 1",
-    "خدمة 2",
-    "خدمة 3",
-    "خدمة 4",
-    "خدمة 5",
-    "خدمة 6",
-    "خدمة 7",
-    "خدمة 8",
-    "خدمة 9",
-    "خدمة 10"
-  ];
+  static const String service1EN = "Service 1";
+  static const String service1AR = "خدمة 1";
+  static const String service2EN = "Service 2";
+  static const String service2AR = "خدمة 2";
+  static const String service3EN = "Service 3";
+  static const String service3AR = "خدمة 3";
+  static const String service4EN = "Service 4";
+  static const String service4AR = "خدمة 4";
+  static const String service5EN = "Service 5";
+  static const String service5AR = "خدمة 5";
+  static const String service6EN = "Service 6";
+  static const String service6AR = "خدمة 6";
+  static const String service7EN = "Service 7";
+  static const String service7AR = "خدمة 7";
+  static const String service8EN = "Service 8";
+  static const String service8AR = "خدمة 8";
+  static const String service9EN = "Service 9";
+  static const String service9AR = "خدمة 9";
+  static const String service10EN = "Service 10";
+  static const String service10AR = "خدمة 9";
 
   // Date-Time Page
   static const String chooseTimeEN = "Choose a time";

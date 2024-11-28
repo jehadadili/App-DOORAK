@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 
 ThemeData lightThem() {
   return ThemeData(
-      
-
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: ColorApp.primarycolor,
       selectedItemColor: ColorApp.white,
@@ -21,6 +19,7 @@ ThemeData lightThem() {
     fontFamily: "Lato",
     scaffoldBackgroundColor: ColorApp.white,
     colorScheme: ColorScheme.light(
+      surfaceContainerLow: ColorApp.white,
       surface: ColorApp.primarycolor,
       primary: ColorApp.blue,
       secondary: ColorApp.greydark.withOpacity(0.4),
@@ -29,7 +28,8 @@ ThemeData lightThem() {
     ),
     cardColor: ColorApp.black.withOpacity(0.10),
     primaryTextTheme: TextTheme(
-      displayLarge:  StyleTextLight.displayLargewhite30W400.copyWith(color: ColorApp.black,fontWeight: FontWeight.w800) ,
+      displayLarge: StyleTextLight.displayLargewhite30W400
+          .copyWith(color: ColorApp.black, fontWeight: FontWeight.w800),
       titleMedium:
           StyleTextLight.titleMediumwhite22W500.copyWith(color: ColorApp.black),
     ),
@@ -43,16 +43,16 @@ ThemeData lightThem() {
       suffixIconColor: ColorApp.black.withOpacity(0.25),
     ),
     textTheme: TextTheme(
-      bodySmall: StyleTextLight.bodysmailwihte14W500,
-       bodyLarge: StyleTextLight.bodyLargewhite46W800,
-      displayLarge: StyleTextLight.displayLargewhite30W400,
-      displayMedium: StyleTextLight.displayMediumpink26W900,
-      displaySmall: StyleTextLight.displaySmallwihte18W500,
-      labelLarge: StyleTextLight.labelLargepink92W800,
-      titleLarge: StyleTextLight.titleLargewhite38W500,
-      titleMedium: StyleTextLight.titleMediumwhite22W500,
-      titleSmall: StyleTextLight.smailtitlegrey12W400,
-    ),
+        bodySmall: StyleTextLight.bodysmailwihte14W500,
+        bodyLarge: StyleTextLight.bodyLargewhite46W800,
+        displayLarge: StyleTextLight.displayLargewhite30W400,
+        displayMedium: StyleTextLight.displayMediumpink26W900,
+        displaySmall: StyleTextLight.displaySmallwihte18W500,
+        labelLarge: StyleTextLight.labelLargepink92W800,
+        titleLarge: StyleTextLight.titleLargewhite38W500,
+        titleMedium: StyleTextLight.titleMediumwhite22W500,
+        titleSmall: StyleTextLight.smailtitlegrey12W400,
+        headlineLarge: StyleTextLight.headlineLargehite32W400),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorApp.primarycolor,

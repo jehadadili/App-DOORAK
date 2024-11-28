@@ -18,9 +18,10 @@ ThemeData darkThem() {
     ),
     brightness: Brightness.dark,
     fontFamily: "Lato",
-    scaffoldBackgroundColor: ColorApp.black,
+    scaffoldBackgroundColor: Colors.black, // الخلفية الشفافة لتفعيل التدرج
     colorScheme: ColorScheme.dark(
-      surface: ColorApp.primarycolor.withOpacity(0.26),
+      surfaceContainerLow: ColorApp.primarycolor,
+      surface: ColorApp.primarycolor.withOpacity(0.15),
       primary: ColorApp.primarycolor,
       secondary: ColorApp.greydark.withOpacity(0.4),
       onPrimary: ColorApp.blue.withOpacity(0.41),
@@ -41,20 +42,45 @@ ThemeData darkThem() {
       suffixIconColor: ColorApp.white.withOpacity(0.25),
     ),
     textTheme: TextTheme(
-      bodyLarge: StyleTextDark.bodyLargewhite46W800,
-      bodySmall: StyleTextDark.bodysmailwihte14W500,
-      displayLarge: StyleTextDark.displayLargewhite30W400,
-      displayMedium: StyleTextDark.displayMediumpink26W900,
-      displaySmall: StyleTextDark.displaySmallwihte18W500,
-      labelLarge: StyleTextDark.labelLargepink92W800,
-      titleLarge: StyleTextDark.titleLargewhite38W500,
-      titleMedium: StyleTextDark.titleMediumwhite22W500,
-      titleSmall: StyleTextDark.smailtitlegrey12W400,
-    ),
+        bodyLarge: StyleTextDark.bodyLargewhite46W800,
+        bodySmall: StyleTextDark.bodysmailwihte14W500,
+        displayLarge: StyleTextDark.displayLargewhite30W400,
+        displayMedium: StyleTextDark.displayMediumpink26W900,
+        displaySmall: StyleTextDark.displaySmallwihte18W500,
+        labelLarge: StyleTextDark.labelLargepink92W800,
+        titleLarge: StyleTextDark.titleLargewhite38W500,
+        titleMedium: StyleTextDark.titleMediumwhite22W500,
+        titleSmall: StyleTextDark.smailtitlegrey12W400,
+        headlineLarge: StyleTextDark.headlineLargehite32W400),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorApp.blue,
       ),
     ),
   );
+}
+
+class DarkModeBackground extends StatelessWidget {
+  final Widget child;
+
+  const DarkModeBackground({required this.child, super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: RadialGradient(
+          colors: [
+            ColorApp.primarycolor, // اللون الوردي
+            Colors.black, // اللون الأسود
+          ],
+          center: Alignment.topCenter,
+          radius: 0.8,
+          focal: Alignment.topCenter,
+          focalRadius: 0.01,
+        ),
+      ),
+      child: child, // محتوى الصفحة
+    );
+  }
 }

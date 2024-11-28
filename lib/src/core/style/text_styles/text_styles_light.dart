@@ -19,6 +19,11 @@ class StyleTextLight {
     fontSize: 38.sp,
     fontWeight: FontWeight.w500,
   );
+  static TextStyle headlineLargehite32W400 = TextStyle(
+    color: ColorApp.white,
+    fontSize: 32.sp,
+    fontWeight: FontWeight.w400,
+  );
 
   static TextStyle displayLargewhite30W400 = TextStyle(
     color: ColorApp.white,
@@ -37,7 +42,7 @@ class StyleTextLight {
   );
   static TextStyle displaySmallwihte18W500 = TextStyle(
     color: ColorApp.white,
-    fontSize: 18.sp,
+    fontSize: 16.sp,
     fontWeight: FontWeight.w500,
   );
   static TextStyle bodysmailwihte14W500 = TextStyle(

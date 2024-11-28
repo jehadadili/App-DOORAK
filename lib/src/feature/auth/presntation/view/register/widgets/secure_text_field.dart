@@ -39,7 +39,7 @@ class _SecureTextFieldState extends State<SecureTextField> {
             prefixIcon: const Icon(IconApp.lock),
             controller: widget.passwordController,
             hintText: AppText.hintPasswordEN,
-            keyboardType: TextInputType.phone,
+            keyboardType: TextInputType.visiblePassword,
             validator: (p0) {
               return null;
             },
@@ -64,7 +64,7 @@ class _SecureTextFieldState extends State<SecureTextField> {
             prefixIcon: const Icon(IconApp.lock),
             controller: widget.confirmpasswordController,
             hintText: AppText.hintPasswordEN,
-            keyboardType: TextInputType.phone,
+            keyboardType: TextInputType.visiblePassword,
             validator: (p0) {
               return null;
             },

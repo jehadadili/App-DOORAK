@@ -1,17 +1,19 @@
 import 'package:doorak/src/core/style/icon/icon_app.dart';
 import 'package:doorak/src/core/style/text/text.dart';
 import 'package:doorak/src/feature/new_ticket/domain/model/home_model.dart';
-import 'package:doorak/src/feature/new_ticket/presntation/view/widgets/custom_design_grid_view.dart';
+import 'package:doorak/src/feature/new_ticket/presntation/view/widgets/custom_new_ticket_design.dart';
 import 'package:flutter/material.dart';
 
-class CustomGridViewBuilder extends StatefulWidget {
-  const CustomGridViewBuilder({super.key});
+class CustomGridViewBuilderTicket extends StatefulWidget {
+  const CustomGridViewBuilderTicket({super.key});
 
   @override
-  State<CustomGridViewBuilder> createState() => _CustomGridViewBuilderState();
+  State<CustomGridViewBuilderTicket> createState() =>
+      _CustomGridViewBuilderTicketState();
 }
 
-class _CustomGridViewBuilderState extends State<CustomGridViewBuilder> {
+class _CustomGridViewBuilderTicketState
+    extends State<CustomGridViewBuilderTicket> {
   List<HomeModel> list = [
     HomeModel(image: IconApp.hospital, text: AppText.hospitalsEN),
     HomeModel(image: IconApp.group, text: AppText.govDepartmentsEN),
@@ -35,11 +37,12 @@ class _CustomGridViewBuilderState extends State<CustomGridViewBuilder> {
             crossAxisCount: 3, // عدد الأعمدة
             crossAxisSpacing: 11.0, // المسافة بين الأعمدة
             mainAxisSpacing: 11.0, // المسافة بين الصفوف
-            childAspectRatio: 106 / 106, // النسبة بين العرض والطول
+            childAspectRatio: 106 / 110, // النسبة بين العرض والطول
           ),
-          itemCount: list.length, // استخدام طول القائمة هنا
+          itemCount: list.length,
+          key: const PageStorageKey('grid_key'),
           itemBuilder: (context, index) {
-            return CustomDesignGridView(
+            return CustomNewTicketDesign(
               homeModel: list[index],
             );
           },
