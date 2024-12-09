@@ -23,9 +23,12 @@ class AppDoorak extends StatelessWidget {
                    useInheritedMediaQuery: true,
                   locale: DevicePreview.locale(context),
                   builder: DevicePreview.appBuilder,
+                  
                   debugShowCheckedModeBanner: false,
                   home: child,
                   theme: context.read<ThemeCubit>().themedata,
+                
+                  
                 );
               },
             ));

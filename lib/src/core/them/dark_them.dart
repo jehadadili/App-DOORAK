@@ -20,15 +20,20 @@ ThemeData darkThem() {
     fontFamily: "Lato",
     scaffoldBackgroundColor: Colors.black, // الخلفية الشفافة لتفعيل التدرج
     colorScheme: ColorScheme.dark(
-      surfaceContainerLow: ColorApp.primarycolor,
-      surface: ColorApp.primarycolor.withOpacity(0.15),
-      primary: ColorApp.primarycolor,
-      secondary: ColorApp.greydark.withOpacity(0.4),
-      onPrimary: ColorApp.blue.withOpacity(0.41),
-      surfaceContainer: ColorApp.white2.withOpacity(0.15),
-    ),
+        surfaceContainerLow: ColorApp.primarycolor,
+        surface: ColorApp.primarycolor.withOpacity(0.15),
+        primary: ColorApp.primarycolor,
+        secondary: ColorApp.greydark.withOpacity(0.4),
+        onPrimary: ColorApp.blue.withOpacity(0.41),
+        surfaceContainer: ColorApp.white2.withOpacity(0.15),
+        onErrorContainer: ColorApp.white2),
     cardColor: ColorApp.white.withOpacity(0.05),
     primaryTextTheme: TextTheme(
+      bodyLarge: StyleTextDark.titleMediumwhite22W500.copyWith(
+        fontWeight: FontWeight.w700,
+      ),
+      bodySmall: StyleTextDark.bodysmailwihte14W500.copyWith(
+          fontWeight: FontWeight.w200, color: ColorApp.white.withOpacity(0.50)),
       displayLarge: StyleTextDark.displayLargewhite30W400
           .copyWith(color: ColorApp.white, fontWeight: FontWeight.w800),
       titleMedium:

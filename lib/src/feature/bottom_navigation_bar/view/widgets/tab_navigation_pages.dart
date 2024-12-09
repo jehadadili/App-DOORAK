@@ -17,7 +17,7 @@ class TabNavigationPages extends StatelessWidget {
     } else if (tabItem == "page2") {
       child = const LocationScreen();
     } else if (tabItem == "page3") {
-      child = const ProfileScreen();
+      child = const UserProfileScreen();
     }
     return Navigator(
       key: navigatorKey,

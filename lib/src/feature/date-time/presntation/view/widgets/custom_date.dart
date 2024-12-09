@@ -1,6 +1,7 @@
 import 'package:doorak/src/core/style/color/color_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart'; // استيراد مكتبة intl
 
 class CustomDate extends StatefulWidget {
   const CustomDate({super.key});
@@ -31,7 +32,8 @@ class _CustomDateState extends State<CustomDate> {
             width: 10.w,
           ),
           Text(
-            "${selectedDate.day}-${selectedDate.month}-${selectedDate.year}",
+            // تنسيق التاريخ باستخدام intl
+            DateFormat('yyyy-MM-dd').format(selectedDate),
             style: TextStyle(fontSize: 14.sp),
           ),
         ],
@@ -52,7 +54,9 @@ class _CustomDateState extends State<CustomDate> {
         selectedDate = date;
       });
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("تم اختيار التاريخ: ${date.toLocal()}")),
+        SnackBar(
+            content: Text(
+                "تم اختيار التاريخ: ${DateFormat('yyyy-MM-dd').format(date)}")),
       );
     }
   }

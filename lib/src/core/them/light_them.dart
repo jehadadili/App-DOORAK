@@ -24,10 +24,16 @@ ThemeData lightThem() {
       primary: ColorApp.blue,
       secondary: ColorApp.greydark.withOpacity(0.4),
       onPrimary: ColorApp.blue,
+      onErrorContainer: ColorApp.blue,
       surfaceContainer: ColorApp.blakandgrey.withOpacity(0.72),
     ),
     cardColor: ColorApp.black.withOpacity(0.10),
     primaryTextTheme: TextTheme(
+      bodyLarge: StyleTextLight.titleMediumwhite22W500
+          .copyWith(fontWeight: FontWeight.w700, color: ColorApp.blue),
+      bodySmall: StyleTextLight.bodysmailwihte14W500.copyWith(
+          fontWeight: FontWeight.w200,
+          color: ColorApp.blackdark.withOpacity(0.50)),
       displayLarge: StyleTextLight.displayLargewhite30W400
           .copyWith(color: ColorApp.black, fontWeight: FontWeight.w800),
       titleMedium:

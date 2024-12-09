@@ -19,10 +19,13 @@ AppBar buildAppBar({
     actions: [
       IconButton(
         onPressed: () {},
-        icon: Icon(
-          IconApp.notifications,
-          color: ColorApp.white,
-          size: 30.sp,
+        icon: Badge.count(
+          count: 2,
+          child: Icon(
+            IconApp.notifications,
+            color: ColorApp.white,
+            size: 30.sp,
+          ),
         ),
       ),
       IconButton(

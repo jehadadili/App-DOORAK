@@ -17,7 +17,7 @@ class DateTimeScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: MediaQuery.sizeOf(context).height * 0.1,
+              height: MediaQuery.sizeOf(context).height * 0.05,
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.w),
