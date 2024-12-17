@@ -1,8 +1,6 @@
-import 'package:doorak/src/core/style/color/color_app.dart';
 import 'package:doorak/src/core/style/image/image_app.dart';
-import 'package:doorak/src/core/style/text/text.dart';
 import 'package:doorak/src/core/widgets/custom_app_bar.dart';
-import 'package:doorak/src/feature/date-time/presntation/view/widgets/custom_date.dart';
+import 'package:doorak/src/feature/date-time/presntation/view/widgets/custom_continer_design_date_time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,7 +15,7 @@ class DateTimeScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: MediaQuery.sizeOf(context).height * 0.05,
+              height: MediaQuery.sizeOf(context).height * 0.03,
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.w),
@@ -27,42 +25,11 @@ class DateTimeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 25.w),
-              child: Container(
-                height: 264.h,
-                decoration: BoxDecoration(
-                  color: ColorApp.blackdark.withOpacity(0.10),
+                padding: EdgeInsetsDirectional.symmetric(
+                  horizontal: 25.w,
+                  vertical: 15.h,
                 ),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 10.h,
-                    ),
-                    FittedBox(
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 80.w),
-                        child: Text(
-                          AppText.chooseTimeEN,
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleMedium
-                              ?.copyWith(
-                                  color: ColorApp.black,
-                                  fontWeight: FontWeight.w700),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10.h,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 15.w),
-                      child: const CustomDate(),
-                    )
-                  ],
-                ),
-              ),
-            ),
+                child: const CustomContinerDesignDateTime()),
             SizedBox(
               height: MediaQuery.sizeOf(context).height * 0.1,
             ),

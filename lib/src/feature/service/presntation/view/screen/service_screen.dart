@@ -12,28 +12,30 @@ class ServiceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context: context),
-      body: Column(
-        children: [
-          SizedBox(
-            height: MediaQuery.sizeOf(context).height * 0.01,
-          ),
-          Image.asset(
-            ImageApp.image,
-            width: MediaQuery.of(context).size.width * .85,
-            height: 110.h,
-          ),
-          Text(
-            AppText.chooseServiceEN,
-            style: Theme.of(context).primaryTextTheme.displayLarge,
-          ),
-          SizedBox(
-            height: 30.h,
-          ),
-          const CustomGridViewBuilderService(),
-          SizedBox(
-            height: MediaQuery.sizeOf(context).height * 0.01,
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.sizeOf(context).height * 0.01,
+            ),
+            Image.asset(
+              ImageApp.image,
+              width: MediaQuery.of(context).size.width * .85,
+              height: 110.h,
+            ),
+            Text(
+              AppText.chooseServiceEN,
+              style: Theme.of(context).primaryTextTheme.displayLarge,
+            ),
+            SizedBox(
+              height: 30.h,
+            ),
+            const CustomGridViewBuilderService(), // No Expanded here
+            SizedBox(
+              height: MediaQuery.sizeOf(context).height * 0.01,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -21,6 +21,7 @@ AppBar buildAppBar({
         onPressed: () {},
         icon: Badge.count(
           count: 2,
+          backgroundColor: ColorApp.blue,
           child: Icon(
             IconApp.notifications,
             color: ColorApp.white,

@@ -20,15 +20,12 @@ class AppDoorak extends StatelessWidget {
             child: BlocBuilder<ThemeCubit, Themestate>(
               builder: (context, state) {
                 return MaterialApp(
-                   useInheritedMediaQuery: true,
+                  useInheritedMediaQuery: true,
                   locale: DevicePreview.locale(context),
                   builder: DevicePreview.appBuilder,
-                  
                   debugShowCheckedModeBanner: false,
                   home: child,
                   theme: context.read<ThemeCubit>().themedata,
-                
-                  
                 );
               },
             ));

@@ -16,7 +16,7 @@ class CustomContainer2 extends StatelessWidget {
             color: Theme.of(context).colorScheme.surfaceContainer,
             borderRadius: BorderRadius.circular(6.r)),
         child: Padding(
-          padding: EdgeInsets.only(left: 18.w, top: 8.h),
+          padding: EdgeInsets.only(left: 10.w, top: 8.h),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

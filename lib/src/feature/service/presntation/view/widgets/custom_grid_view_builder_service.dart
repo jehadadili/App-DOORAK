@@ -25,20 +25,22 @@ class _CustomGridViewBuilderServiceState
     BranchModel(text: AppText.service9EN),
     BranchModel(text: AppText.service10EN),
   ];
+
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return SizedBox(
+      height:
+          MediaQuery.of(context).size.height * 0.6, // Set an appropriate height
       child: Padding(
-        padding:
-            const EdgeInsets.symmetric(horizontal: 27.0), // المسافة من الأطراف
+        padding: const EdgeInsets.symmetric(horizontal: 27.0), // Padding
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            crossAxisSpacing: 11, // المسافة بين الأعمدة
-            mainAxisSpacing: 11, // المسافة بين الصفوف
-            childAspectRatio: 165 / 106, // النسبة بين العرض والطول
+            crossAxisSpacing: 11,
+            mainAxisSpacing: 11,
+            childAspectRatio: 165 / 106,
           ),
-          itemCount: list.length, // استخدام طول القائمة هنا
+          itemCount: list.length,
           itemBuilder: (context, index) {
             return CustomServiceDesign(
               branchModel: list[index],

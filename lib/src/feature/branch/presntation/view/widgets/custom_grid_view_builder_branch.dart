@@ -3,17 +3,10 @@ import 'package:doorak/src/feature/branch/domain/model/branch_model.dart';
 import 'package:doorak/src/feature/branch/presntation/view/widgets/custom_branch_design.dart';
 import 'package:flutter/material.dart';
 
-class CustomGridViewBuilderBranch extends StatefulWidget {
-  const CustomGridViewBuilderBranch({super.key});
+class CustomGridViewBuilderBranch extends StatelessWidget {
+  CustomGridViewBuilderBranch({super.key});
 
-  @override
-  State<CustomGridViewBuilderBranch> createState() =>
-      _CustomGridViewBuilderBranchState();
-}
-
-class _CustomGridViewBuilderBranchState
-    extends State<CustomGridViewBuilderBranch> {
-  List<BranchModel> list = [
+  final List<BranchModel> list = [
     BranchModel(text: AppText.jubeihaEN),
     BranchModel(text: AppText.seventhCircleEN),
     BranchModel(text: AppText.tajMallEN),
@@ -30,25 +23,20 @@ class _CustomGridViewBuilderBranchState
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding:
-            const EdgeInsets.symmetric(horizontal: 27.0), // المسافة من الأطراف
-        child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 11, // المسافة بين الأعمدة
-            mainAxisSpacing: 11, // المسافة بين الصفوف
-            childAspectRatio: 165 / 106, // النسبة بين العرض والطول
-          ),
-          itemCount: list.length, // استخدام طول القائمة هنا
-          itemBuilder: (context, index) {
-            return CustomBranchDesign(
-              branchModel: list[index],
-            );
-          },
-        ),
+    return GridView.builder(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 12,
+        mainAxisSpacing: 12,
+        childAspectRatio: 165 / 106,
       ),
+      physics: const NeverScrollableScrollPhysics(), // تعطيل التمرير الداخلي
+      shrinkWrap: true, // اجعل الشبكة تتقلص حسب الحاجة
+      itemCount: list.length,
+      itemBuilder: (context, index) {
+        return CustomBranchDesign(branchModel: list[index]);
+      },
     );
   }
 }

@@ -1,7 +1,5 @@
-import 'package:doorak/src/core/style/color/color_app.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intl/intl.dart'; // استيراد مكتبة intl
+import 'package:intl/intl.dart';
 
 class CustomDate extends StatefulWidget {
   const CustomDate({super.key});
@@ -13,51 +11,52 @@ class CustomDate extends StatefulWidget {
 class _CustomDateState extends State<CustomDate> {
   DateTime selectedDate = DateTime.now();
 
+  // فتح نافذة اختيار التاريخ
+  void _showDatePicker() {
+    showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2024),
+      lastDate: DateTime(2999),
+    ).then((value) {
+      if (value != null) {
+        setState(() {
+          selectedDate = value; // تحديث الحالة
+        });
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40.h,
-      padding: EdgeInsets.symmetric(horizontal: 17.w),
+      constraints: BoxConstraints(
+        maxWidth: MediaQuery.of(context).size.width * 0.9, // تحديد عرض الحاوية
+      ),
+      height: 40, // ارتفاع مناسب
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(6.r),
-        color: ColorApp.darkpurplegray.withOpacity(0.15),
+        borderRadius: BorderRadius.circular(8),
+        color: Theme.of(context).inputDecorationTheme.fillColor,
       ),
       child: Row(
         children: [
-          GestureDetector(
-            onTap: () => _showDatePicker(context),
-            child: Icon(Icons.calendar_today, size: 20.sp),
+          IconButton(
+            onPressed: _showDatePicker,
+            icon: Icon(
+              Icons.calendar_today,
+              color: Theme.of(context).inputDecorationTheme.suffixIconColor,
+            ),
           ),
-          SizedBox(
-            width: 10.w,
-          ),
-          Text(
-            // تنسيق التاريخ باستخدام intl
-            DateFormat('yyyy-MM-dd').format(selectedDate),
-            style: TextStyle(fontSize: 14.sp),
+          Expanded(
+            // استخدام Expanded لضمان عدم تجاوز النص المساحة المتاحة
+            child: Text(
+              DateFormat('yyyy-MM-dd').format(selectedDate),
+              style: Theme.of(context).inputDecorationTheme.hintStyle,
+            ),
           ),
         ],
       ),
     );
-  }
-
-  // دالة لعرض DatePicker لاختيار التاريخ
-  void _showDatePicker(BuildContext context) async {
-    DateTime? date = await showDatePicker(
-      context: context,
-      initialDate: selectedDate,
-      firstDate: DateTime(2020),
-      lastDate: DateTime(2030),
-    );
-    if (date != null) {
-      setState(() {
-        selectedDate = date;
-      });
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-            content: Text(
-                "تم اختيار التاريخ: ${DateFormat('yyyy-MM-dd').format(date)}")),
-      );
-    }
   }
 }
