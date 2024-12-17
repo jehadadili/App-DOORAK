@@ -1,6 +1,7 @@
 import 'package:doorak/src/core/style/color/color_app.dart';
 import 'package:doorak/src/core/style/text_styles/text_styles_light.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 ThemeData lightThem() {
   return ThemeData(
@@ -34,6 +35,8 @@ ThemeData lightThem() {
       bodySmall: StyleTextLight.bodysmailwihte14W500.copyWith(
           fontWeight: FontWeight.w200,
           color: ColorApp.blackdark.withOpacity(0.50)),
+      displayMedium: StyleTextLight.displayLargewhite30W400
+          .copyWith(color: ColorApp.black, fontSize: 28.sp),
       displayLarge: StyleTextLight.displayLargewhite30W400
           .copyWith(color: ColorApp.black, fontWeight: FontWeight.w800),
       titleMedium:
@@ -57,7 +60,9 @@ ThemeData lightThem() {
         labelLarge: StyleTextLight.labelLargepink92W800,
         titleLarge: StyleTextLight.titleLargewhite38W500,
         titleMedium: StyleTextLight.titleMediumwhite22W500,
+        labelMedium: StyleTextLight.labelMediumblack20W400,
         titleSmall: StyleTextLight.smailtitlegrey12W400,
+        bodyMedium: StyleTextLight.bodyMediumblack28W400,
         headlineLarge: StyleTextLight.headlineLargehite32W400),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(

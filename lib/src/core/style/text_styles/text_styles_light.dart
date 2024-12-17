@@ -35,6 +35,11 @@ class StyleTextLight {
     fontSize: 30.sp,
     fontWeight: FontWeight.w400,
   );
+  static TextStyle bodyMediumblack28W400 = TextStyle(
+    color: ColorApp.black,
+    fontFamily: "Lato",
+    fontSize: 28.sp,
+  );
   static TextStyle displayMediumpink26W900 = TextStyle(
     color: ColorApp.primarycolor,
     fontFamily: "Lato",
@@ -46,6 +51,12 @@ class StyleTextLight {
     fontFamily: "Lato",
     fontSize: 22.sp,
     fontWeight: FontWeight.w500,
+  );
+  static TextStyle labelMediumblack20W400 = TextStyle(
+    color: ColorApp.black,
+    fontFamily: "Lato",
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
   );
   static TextStyle displaySmallwihte18W500 = TextStyle(
     color: ColorApp.white,

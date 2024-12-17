@@ -19,7 +19,7 @@ class StyleTextDark {
     fontSize: 38.sp,
     fontWeight: FontWeight.w500,
   );
-   static TextStyle headlineLargehite32W400 = TextStyle(
+  static TextStyle headlineLargehite32W400 = TextStyle(
     color: ColorApp.white,
     fontSize: 32.sp,
     fontWeight: FontWeight.w400,
@@ -30,6 +30,12 @@ class StyleTextDark {
     fontSize: 30.sp,
     fontWeight: FontWeight.w400,
   );
+
+  static TextStyle bodyMediumblack28W400 = TextStyle(
+    color: ColorApp.white,
+    fontFamily: "Lato",
+    fontSize: 28.sp,
+  );
   static TextStyle displayMediumpink26W900 = TextStyle(
     color: ColorApp.primarycolor,
     fontSize: 26.sp,
@@ -39,6 +45,12 @@ class StyleTextDark {
     color: ColorApp.white,
     fontSize: 22.sp,
     fontWeight: FontWeight.w500,
+  );
+  static TextStyle labelMediumblack20W400 = TextStyle(
+    color: ColorApp.white,
+    fontFamily: "Lato",
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
   );
   static TextStyle displaySmallwihte18W500 = TextStyle(
     color: ColorApp.white,

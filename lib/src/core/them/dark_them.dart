@@ -34,6 +34,7 @@ ThemeData darkThem() {
       ),
       bodySmall: StyleTextDark.bodysmailwihte14W500.copyWith(
           fontWeight: FontWeight.w200, color: ColorApp.white.withOpacity(0.50)),
+      displayMedium: StyleTextDark.displayLargewhite30W400,
       displayLarge: StyleTextDark.displayLargewhite30W400
           .copyWith(color: ColorApp.white, fontWeight: FontWeight.w800),
       titleMedium:
@@ -48,6 +49,8 @@ ThemeData darkThem() {
     ),
     textTheme: TextTheme(
         bodyLarge: StyleTextDark.bodyLargewhite46W800,
+        bodyMedium: StyleTextDark.bodyMediumblack28W400,
+        labelMedium: StyleTextDark.labelMediumblack20W400,
         bodySmall: StyleTextDark.bodysmailwihte14W500,
         displayLarge: StyleTextDark.displayLargewhite30W400,
         displayMedium: StyleTextDark.displayMediumpink26W900,

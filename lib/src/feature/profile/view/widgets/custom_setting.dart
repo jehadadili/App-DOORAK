@@ -34,7 +34,7 @@ class CustomSetting extends StatelessWidget {
         SizedBox(
           height: 20.h,
         ),
-        SwitchListTileExample()
+        const SwitchListTileExample()
       ],
     );
   }
