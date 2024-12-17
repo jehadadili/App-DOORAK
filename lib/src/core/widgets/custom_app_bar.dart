@@ -6,8 +6,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 AppBar buildAppBar({
-  required BuildContext context, // تمرير context كمعامل
+  required BuildContext context,
 }) {
+  final themeCubit = context.watch<ThemeCubit>(); // متابعة تغييرات الثيم
+
   return AppBar(
     backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
     title: Text(
@@ -31,11 +33,14 @@ AppBar buildAppBar({
       ),
       IconButton(
         onPressed: () {
-          context.read<ThemeCubit>().togleThem();
+          themeCubit.togleThem(); // تبديل الثيم
         },
-        icon: Icon(context.read<ThemeCubit>().state == Themestate.dark
-            ? Icons.light_mode
-            : Icons.dark_mode),
+        icon: Icon(
+          themeCubit.state == Themestate.dark
+              ? Icons.light_mode // أيقونة الوضع الليلي
+              : Icons.dark_mode, // أيقونة الوضع النهاري
+          color: ColorApp.white,
+        ),
       ),
     ],
   );

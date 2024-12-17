@@ -181,9 +181,9 @@ class AppText {
   static const String displayAR = "الشاشة";
   static const String systemEN = "System";
   static const String systemAR = "النظام";
-  static const String lightModeEN = "Light Mode";
+  static const String lightModeEN = "Light";
   static const String lightModeAR = "الوضع الفاتح";
-  static const String darkModeEN = "Dark Mode";
+  static const String darkModeEN = "Dark";
   static const String darkModeAR = "الوضع الداكن";
   static const String notificationEN = "Notification";
   static const String notificationAR = "الإشعارات";
