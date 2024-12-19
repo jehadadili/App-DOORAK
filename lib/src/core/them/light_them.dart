@@ -30,6 +30,10 @@ ThemeData lightThem() {
     ),
     cardColor: ColorApp.black.withOpacity(0.10),
     primaryTextTheme: TextTheme(
+      headlineLarge: StyleTextLight.headlineLargehite32W400.copyWith(
+        color: ColorApp.blue,
+        fontWeight: FontWeight.w800,
+      ),
       bodyLarge: StyleTextLight.titleMediumwhite22W500
           .copyWith(fontWeight: FontWeight.w700, color: ColorApp.blue),
       bodySmall: StyleTextLight.bodysmailwihte14W500.copyWith(
@@ -67,6 +71,7 @@ ThemeData lightThem() {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorApp.primarycolor,
+        disabledBackgroundColor: ColorApp.primarycolor,
       ),
     ),
   );

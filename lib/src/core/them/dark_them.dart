@@ -32,6 +32,9 @@ ThemeData darkThem() {
       bodyLarge: StyleTextDark.titleMediumwhite22W500.copyWith(
         fontWeight: FontWeight.w700,
       ),
+      headlineLarge: StyleTextDark.headlineLargehite32W400.copyWith(
+        fontWeight: FontWeight.w800,
+      ),
       bodySmall: StyleTextDark.bodysmailwihte14W500.copyWith(
           fontWeight: FontWeight.w200, color: ColorApp.white.withOpacity(0.50)),
       displayMedium: StyleTextDark.displayLargewhite30W400,
@@ -63,6 +66,7 @@ ThemeData darkThem() {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorApp.blue,
+      
       ),
     ),
   );

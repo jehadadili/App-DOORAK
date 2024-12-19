@@ -1,6 +1,8 @@
+import 'package:doorak/src/core/extension/extension_navgter.dart';
 import 'package:doorak/src/core/style/color/color_app.dart';
 import 'package:doorak/src/core/style/icon/icon_app.dart';
 import 'package:doorak/src/core/them/them_cubit/theme_cubit.dart';
+import 'package:doorak/src/feature/notifications/presntation/view/screen/notifications_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +22,9 @@ AppBar buildAppBar({
     iconTheme: const IconThemeData(color: ColorApp.white),
     actions: [
       IconButton(
-        onPressed: () {},
+        onPressed: () {
+          context.pushWidget(push: const NotificationsScreen());
+        },
         icon: Badge.count(
           count: 2,
           backgroundColor: ColorApp.blue,

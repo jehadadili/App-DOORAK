@@ -70,6 +70,7 @@ class StyleTextLight {
     fontSize: 14.sp,
     fontWeight: FontWeight.w500,
   );
+ 
 
   static TextStyle smailtitlegrey12W400 = TextStyle(
     color: ColorApp.grey.withOpacity(0.55),
