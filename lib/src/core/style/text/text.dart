@@ -22,6 +22,8 @@ class AppText {
 
   static const String forgotPasswordEN = "Forgot Password ?";
   static const String forgotPasswordAR = "نسيت كلمة المرور";
+  static const String enterphoneEN = "Enter Your phone number";
+  static const String enterphoneAR = "أدخل رقم هاتفك";
 
   static const String rememberMeEN = "Remember me";
   static const String rememberMeAR = "تذكرني";
@@ -156,7 +158,7 @@ class AppText {
   static const String reservationForEN = "Reservation for:";
   static const String reservationForAR = "الحجز لـ:";
   static const String reservationDateTimeEN =
-      "Tuesday - 22/04/2025 12:00 - 13:00";
+      "Tuesday - 22/04/2025 \n 12:00 - 13:00";
   static const String reservationDateTimeAR =
       "الثلاثاء - ٢٢/٠٤/٢٠٢٥ ١٢:٠٠ - ١٣:٠٠";
   static const String yourNumberEN = "Your Number is:";

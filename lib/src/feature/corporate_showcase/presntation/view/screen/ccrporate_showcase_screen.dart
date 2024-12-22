@@ -1,3 +1,4 @@
+import 'package:doorak/src/core/style/size/app_size.dart';
 import 'package:doorak/src/core/widgets/custom_app_bar.dart';
 import 'package:doorak/src/feature/corporate_showcase/presntation/view/widgets/custom_list_view_builder_corporate_showcase.dart';
 import 'package:flutter/material.dart';
@@ -12,11 +13,11 @@ class CcrporateShowcaseScreen extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: MediaQuery.sizeOf(context).height * 0.01,
+            height: Sizes.height(context) * 0.01,
           ),
           const CustomGridViewBuilderCorporateShowcase(),
           SizedBox(
-            height: MediaQuery.sizeOf(context).height * 0.01,
+            height: Sizes.height(context) * 0.01,
           ),
         ],
       ),

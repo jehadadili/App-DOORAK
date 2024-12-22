@@ -1,7 +1,6 @@
 import 'dart:math';
 
 class TimeSlotManager {
-  // دالة إنشاء الفترات الزمنية بفواصل 15 دقيقة
   static List<String> generateTimeSlots() {
     List<String> slots = [];
     DateTime startTime = DateTime(2024, 1, 1, 8, 0);

@@ -1,5 +1,6 @@
 import 'package:doorak/src/core/extension/extension_navgter.dart';
 import 'package:doorak/src/core/style/button/custom_buttom_light.dart';
+import 'package:doorak/src/core/style/size/app_size.dart';
 import 'package:doorak/src/core/style/text/text.dart';
 import 'package:doorak/src/core/widgets/no.account_section.dart';
 import 'package:doorak/src/feature/auth/presntation/view/login/widgets/login_info_card.dart';
@@ -33,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 60.h),
+              SizedBox(height: Sizes.height(context) * 0.1),
               Text(
                 AppText.appName,
                 style: Theme.of(context).textTheme.labelLarge,
@@ -60,7 +61,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         text: AppText.loginEN,
                         onPressed: () {
                           context.pushReplacement(
-                              pushReplacement: const CustomCurvedNavigationBar());
+                              pushReplacement:
+                                  const CustomCurvedNavigationBar());
                         },
                       ),
                       SizedBox(height: 15.h),
@@ -82,8 +84,4 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-}
-
-getscreenwith(context) {
-  return MediaQuery.sizeOf(context).width;
 }

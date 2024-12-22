@@ -14,5 +14,6 @@ void main() async {
     DevicePreview(
    enabled: !kReleaseMode,
     builder: (context) =>
-    const AppDoorak() ) );
+    const AppDoorak() )
+     );
 }

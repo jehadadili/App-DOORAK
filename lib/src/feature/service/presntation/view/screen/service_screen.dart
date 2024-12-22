@@ -1,4 +1,5 @@
 import 'package:doorak/src/core/style/image/image_app.dart';
+import 'package:doorak/src/core/style/size/app_size.dart';
 import 'package:doorak/src/core/style/text/text.dart';
 import 'package:doorak/src/core/widgets/custom_app_bar.dart';
 import 'package:doorak/src/feature/service/presntation/view/widgets/custom_grid_view_builder_service.dart';
@@ -12,15 +13,15 @@ class ServiceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context: context),
-      body: SingleChildScrollView(
+      body: SafeArea(
         child: Column(
           children: [
             SizedBox(
-              height: MediaQuery.sizeOf(context).height * 0.01,
+              height: Sizes.height(context) * 0.01,
             ),
             Image.asset(
               ImageApp.image,
-              width: MediaQuery.of(context).size.width * .85,
+              width: Sizes.width(context) * 0.85,
               height: 110.h,
             ),
             Text(
@@ -28,11 +29,16 @@ class ServiceScreen extends StatelessWidget {
               style: Theme.of(context).primaryTextTheme.displayLarge,
             ),
             SizedBox(
-              height: 30.h,
+              height: 20.h,
             ),
-            const CustomGridViewBuilderService(), // No Expanded here
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 27.w),
+                child: CustomGridViewBuilderService(),
+              ),
+            ),
             SizedBox(
-              height: MediaQuery.sizeOf(context).height * 0.01,
+              height: Sizes.height(context) * 0.01,
             ),
           ],
         ),

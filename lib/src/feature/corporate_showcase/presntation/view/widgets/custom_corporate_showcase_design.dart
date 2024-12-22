@@ -1,6 +1,7 @@
 import 'package:doorak/src/core/extension/extension_navgter.dart';
 import 'package:doorak/src/core/style/color/color_app.dart';
 import 'package:doorak/src/core/style/image/image_app.dart';
+import 'package:doorak/src/core/style/size/app_size.dart';
 import 'package:doorak/src/feature/branch/presntation/view/screen/branch_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +21,7 @@ class CustomCorporateShowcaseDesign extends StatelessWidget {
           },
           child: Image.asset(
             ImageApp.image,
-            width: MediaQuery.of(context).size.width * .90,
+            width: Sizes.width(context) * .90,
             height: 110.h,
           ),
         ),

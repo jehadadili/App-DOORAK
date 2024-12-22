@@ -24,18 +24,19 @@ class CustomGridViewBuilderBranch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      shrinkWrap: true,
+      physics: const AlwaysScrollableScrollPhysics(), // تمكين التمرير
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        crossAxisSpacing: 12,
-        mainAxisSpacing: 12,
+        crossAxisSpacing: 11,
+        mainAxisSpacing: 11,
         childAspectRatio: 165 / 106,
       ),
-      physics: const NeverScrollableScrollPhysics(), // تعطيل التمرير الداخلي
-      shrinkWrap: true, // اجعل الشبكة تتقلص حسب الحاجة
       itemCount: list.length,
       itemBuilder: (context, index) {
-        return CustomBranchDesign(branchModel: list[index]);
+        return CustomBranchDesign(
+          branchModel: list[index],
+        );
       },
     );
   }

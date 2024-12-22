@@ -1,4 +1,5 @@
 import 'package:doorak/src/core/style/image/image_app.dart';
+import 'package:doorak/src/core/style/size/app_size.dart';
 import 'package:doorak/src/core/widgets/custom_app_bar.dart';
 import 'package:doorak/src/feature/date-time/presntation/view/widgets/custom_continer_design_date_time.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class DateTimeScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: MediaQuery.sizeOf(context).height * 0.03,
+              height: Sizes.height(context) * 0.03,
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.w),
@@ -31,7 +32,7 @@ class DateTimeScreen extends StatelessWidget {
                 ),
                 child: const CustomContinerDesignDateTime()),
             SizedBox(
-              height: MediaQuery.sizeOf(context).height * 0.1,
+              height: Sizes.height(context) * 0.1,
             ),
           ],
         ),
