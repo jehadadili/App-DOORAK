@@ -3,14 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButtomLight extends StatelessWidget {
-  const CustomButtomLight(
-      {super.key,
-      required this.text,
-      this.onPressed,
-      required this.horizontal});
+  const CustomButtomLight({
+    super.key,
+    required this.text,
+    this.onPressed,
+    required this.horizontal,
+    this.backgroundColor, // معامل لون الزر الجديد
+  });
+
   final String text;
   final void Function()? onPressed;
   final double horizontal;
+  final Color? backgroundColor; // اللون الخلفي يمكن تغييره
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,11 +26,12 @@ class CustomButtomLight extends StatelessWidget {
         child: ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(
-            backgroundColor: Theme.of(context)
-                .elevatedButtonTheme
-                .style!
-                .backgroundColor
-                ?.resolve({}),
+            backgroundColor: backgroundColor ??
+                Theme.of(context)
+                    .elevatedButtonTheme
+                    .style!
+                    .backgroundColor
+                    ?.resolve({}),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(6.r),
             ),

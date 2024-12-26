@@ -8,7 +8,9 @@ ThemeData lightThem() {
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: ColorApp.primarycolor,
       selectedItemColor: ColorApp.white,
+      unselectedItemColor: ColorApp.white,
     ),
+    canvasColor: Colors.black.withOpacity(0.6),
     appBarTheme: AppBarTheme(
       centerTitle: true,
       color: ColorApp.primarycolor,
@@ -33,6 +35,9 @@ ThemeData lightThem() {
       headlineLarge: StyleTextLight.headlineLargehite32W400.copyWith(
         color: ColorApp.blue,
         fontWeight: FontWeight.w800,
+      ),
+      labelSmall: StyleTextLight.displayMediumpink26W900.copyWith(
+        color: ColorApp.primarycolor,
       ),
       bodyLarge: StyleTextLight.titleMediumwhite22W500
           .copyWith(fontWeight: FontWeight.w700, color: ColorApp.blue),

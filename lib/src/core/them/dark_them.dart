@@ -7,7 +7,9 @@ ThemeData darkThem() {
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: ColorApp.blakandgrey.withOpacity(0.72),
       selectedItemColor: ColorApp.blakandgrey.withOpacity(0.60),
+      unselectedItemColor: ColorApp.black,
     ),
+    canvasColor: ColorApp.white.withOpacity(0.6),
     appBarTheme: AppBarTheme(
       centerTitle: true,
       backgroundColor: ColorApp.black.withOpacity(0.15),
@@ -34,6 +36,9 @@ ThemeData darkThem() {
       ),
       headlineLarge: StyleTextDark.headlineLargehite32W400.copyWith(
         fontWeight: FontWeight.w800,
+      ),
+      labelSmall: StyleTextDark.displayMediumpink26W900.copyWith(
+        color: ColorApp.blue,
       ),
       bodySmall: StyleTextDark.bodysmailwihte14W500.copyWith(
           fontWeight: FontWeight.w200, color: ColorApp.white.withOpacity(0.50)),
@@ -66,7 +71,6 @@ ThemeData darkThem() {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorApp.blue,
-      
       ),
     ),
   );
