@@ -60,10 +60,10 @@ class _SecureTextFieldState extends State<SecureTextField> {
           CustomTextFieldWidgets(
             obscureText: !isVisiblec,
             height: 40,
-            labelText: AppText.labelPasswordEN,
+            labelText: AppText.confirmChangesEN,
             prefixIcon: const Icon(IconApp.lock),
             controller: widget.confirmpasswordController,
-            hintText: AppText.hintPasswordEN,
+            hintText: AppText.confirmChangesEN,
             keyboardType: TextInputType.visiblePassword,
             validator: (p0) {
               return null;

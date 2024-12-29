@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'package:doorak/src/core/extension/extension_navgter.dart';
 import 'package:doorak/src/core/style/button/custom_buttom_light.dart';
 import 'package:doorak/src/core/style/color/color_app.dart';
 import 'package:doorak/src/core/widgets/custom_text_fiald.dart';
+import 'package:doorak/src/feature/forgot_password/presntation/view/widgets/change_password/presntation/view/screen/change_password_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -104,7 +106,9 @@ class _OTPDialogState extends State<OTPDialog> {
                 horizontal: 17,
                 backgroundColor: ColorApp.primarycolor,
                 text: "Send OTP",
-                onPressed: () {},
+                onPressed: () {
+                  context.pushWidget(push: ChangePasswordScreen());
+                },
               ),
             ),
           ],

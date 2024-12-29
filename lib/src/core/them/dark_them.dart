@@ -9,6 +9,8 @@ ThemeData darkThem() {
       selectedItemColor: ColorApp.blakandgrey.withOpacity(0.60),
       unselectedItemColor: ColorApp.black,
     ),
+    disabledColor: ColorApp.white2.withOpacity(0.15),
+
     canvasColor: ColorApp.white.withOpacity(0.6),
     appBarTheme: AppBarTheme(
       centerTitle: true,

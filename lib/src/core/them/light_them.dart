@@ -10,6 +10,7 @@ ThemeData lightThem() {
       selectedItemColor: ColorApp.white,
       unselectedItemColor: ColorApp.white,
     ),
+    disabledColor: ColorApp.primarycolor.withOpacity(0.30),
     canvasColor: Colors.black.withOpacity(0.6),
     appBarTheme: AppBarTheme(
       centerTitle: true,
