@@ -34,7 +34,7 @@ class HomeSceen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
+              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
               child: Text(
                 AppText.manageTicketsEN,
                 style: Theme.of(context).primaryTextTheme.titleMedium,
@@ -45,7 +45,7 @@ class HomeSceen extends StatelessWidget {
               height: 13.h,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 26.w),
+              padding: EdgeInsets.symmetric(horizontal: 17.w),
               child: Row(
                 children: [
                   const CustomContainer2(),
