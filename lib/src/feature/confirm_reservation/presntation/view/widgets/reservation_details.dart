@@ -10,17 +10,22 @@ class ReservationDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15.w),
+      padding: EdgeInsets.symmetric(horizontal: 10.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const DetailColumn(title: AppText.serviceEN, value: AppText.roomReservationEN),
+          const DetailColumn(
+              title: AppText.serviceEN, value: AppText.roomReservationEN),
           SizedBox(height: 10.h),
-          const DetailColumn(title: AppText.reservationForEN, value: AppText.reservationDateTimeEN),
+          const DetailColumn(
+              title: AppText.reservationForEN,
+              value: AppText.reservationDateTimeEN),
           SizedBox(height: 10.h),
-          const NumericRow(title: AppText.yourNumberEN, value: "20"),
+          const FittedBox(
+              child: NumericRow(title: AppText.yourNumberEN, value: "20")),
           SizedBox(height: 10.h),
-          const NumericRow(title: AppText.peopleWaitingEN, value: "10"),
+          const FittedBox(
+              child: NumericRow(title: AppText.peopleWaitingEN, value: "10")),
         ],
       ),
     );
