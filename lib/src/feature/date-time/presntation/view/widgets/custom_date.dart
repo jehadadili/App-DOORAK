@@ -12,20 +12,33 @@ class _CustomDateState extends State<CustomDate> {
   DateTime selectedDate = DateTime.now();
 
   // فتح نافذة اختيار التاريخ
-  void _showDatePicker() {
-    showDatePicker(
-      context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime(2024),
-      lastDate: DateTime(2999),
-    ).then((value) {
-      if (value != null) {
-        setState(() {
-          selectedDate = value; // تحديث الحالة
-        });
-      }
-    });
-  }
+ void _showDatePicker() {
+
+      showDatePicker(
+        context: context,
+        initialDate: DateTime.now(),
+        firstDate: DateTime(2024),
+        lastDate: DateTime(2999),
+        builder: (context, child) {
+          return Theme(
+            data: ThemeData.light().copyWith(
+              textTheme: TextTheme(
+                bodyLarge: TextStyle(fontSize: 16.0),
+                // تغيير حجم النص هنا
+              ),
+            ),
+            child: child!,
+          );
+        },
+      ).then((value) {
+        if (value != null) {
+          setState(() {
+            selectedDate = value; // تحديث الحالة
+          });
+        }
+      });
+
+    }
 
   @override
   Widget build(BuildContext context) {
