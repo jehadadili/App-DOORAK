@@ -41,7 +41,7 @@ class CustomTextFieldWidgets extends StatelessWidget {
             ?.copyWith(color: ColorApp.black.withOpacity(0.25)),
         controller: controller,
         validator: validator,
-        obscureText: obscureText ?? true,
+        obscureText: obscureText ?? false,
         keyboardType: keyboardType,
         decoration: InputDecoration(
           fillColor: Theme.of(context).inputDecorationTheme.fillColor,
@@ -72,7 +72,8 @@ class CustomTextFieldWidgets extends StatelessWidget {
           prefixIconColor:
               Theme.of(context).inputDecorationTheme.prefixIconColor,
           suffixIcon: suffixIcon,
-          suffixIconColor: Theme.of(context).inputDecorationTheme.suffixIconColor,
+          suffixIconColor:
+              Theme.of(context).inputDecorationTheme.suffixIconColor,
           hintText: hintText,
           hintStyle: Theme.of(context).inputDecorationTheme.hintStyle,
           labelText: labelText,

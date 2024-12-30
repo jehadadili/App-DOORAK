@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:doorak/src/core/them/them_cubit/theme_cubit.dart';
 import 'package:doorak/src/feature/splash_screen/screen/splach_screen.dart';
 import 'package:flutter/material.dart';
@@ -20,9 +19,6 @@ class AppDoorak extends StatelessWidget {
             child: BlocBuilder<ThemeCubit, Themestate>(
               builder: (context, state) {
                 return MaterialApp(
-                  useInheritedMediaQuery: true,
-                  locale: DevicePreview.locale(context),
-                  builder: DevicePreview.appBuilder,
                   debugShowCheckedModeBanner: false,
                   home: child,
                   theme: context.read<ThemeCubit>().themedata,
