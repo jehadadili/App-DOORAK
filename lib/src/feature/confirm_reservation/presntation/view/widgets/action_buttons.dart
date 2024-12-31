@@ -1,9 +1,9 @@
-import 'package:doorak/src/core/style/color/color_app.dart';
-import 'package:doorak/src/core/style/text/text.dart';
-import 'package:doorak/src/feature/confirm_reservation/presntation/view/widgets/button_widget.dart';
+import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:confetti/confetti.dart';
+import 'package:doorak/src/core/style/color/color_app.dart';
+import 'package:doorak/src/core/style/text/text.dart';
+import 'button_widget.dart';
 
 class ActionButtons extends StatefulWidget {
   const ActionButtons({super.key});
@@ -35,7 +35,7 @@ class _ActionButtonsState extends State<ActionButtons> {
       children: [
         Row(
           children: [
-            const Expanded(
+            Expanded(
               child: ButtonWidget(
                 text: AppText.cancelEN,
                 color: ColorApp.greydark,
@@ -45,9 +45,9 @@ class _ActionButtonsState extends State<ActionButtons> {
             Expanded(
               child: InkWell(
                 onTap: () {
-                  _confettiController.play(); 
+                  _confettiController.play();
                 },
-                child: const ButtonWidget(
+                child: ButtonWidget(
                   text: "Confirm",
                   color: ColorApp.primarycolor,
                 ),
@@ -64,7 +64,7 @@ class _ActionButtonsState extends State<ActionButtons> {
             Colors.blue,
             Colors.pink,
             Colors.orange,
-            Colors.purple
+            Colors.purple,
           ],
         ),
       ],
