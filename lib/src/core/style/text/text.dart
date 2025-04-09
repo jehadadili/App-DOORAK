@@ -22,8 +22,8 @@ class AppText {
 
   static const String forgotPasswordEN = "Forgot Password ?";
   static const String forgotPasswordAR = "نسيت كلمة المرور";
-  static const String enterphoneEN = "Enter Your phone number";
-  static const String enterphoneAR = "أدخل رقم هاتفك";
+  static const String enteremailEN = "Enter Your email";
+  static const String enteremailAR = "أدخل ايميلك";
 
   static const String rememberMeEN = "Remember me";
   static const String rememberMeAR = "تذكرني";
@@ -40,11 +40,11 @@ class AppText {
   static const String hintUsernameEN = "Please enter your username";
   static const String hintUsernameAR = "يرجى إدخال اسم المستخدم";
 
-  // Phone Number
-  static const String labelPhoneEN = "Phone Number";
-  static const String labelPhoneAR = "رقم الهاتف";
-  static const String hintPhoneEN = "Please enter your phone number";
-  static const String hintPhoneAR = "يرجى إدخال رقم هاتفك";
+  // email
+  static const String labelemailEN = "email";
+  static const String labelemailAR = "ايميل";
+  static const String hintemailEN = "Please enter your email ";
+  static const String hintemailAR = "يرجى إدخال ايميلك";
 
   // Password
   static const String labelPasswordEN = "Password";

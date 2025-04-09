@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class IconApp {
   static const person = Icons.person;
   static const lock = Icons.lock;
+  static const email = Icons.email;
   static const ticket = "assets/icons/ticket.png";
   static const event = "assets/icons/event.png";
   static const arrowoutward = Icons.arrow_outward;

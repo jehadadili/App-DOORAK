@@ -6,11 +6,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 
 class CustomPersonalInformation extends StatelessWidget {
-  final TextEditingController phoneController;
+  final TextEditingController emailController;
   final TextEditingController usernameController;
   const CustomPersonalInformation({
     super.key,
-    required this.phoneController,
+    required this.emailController,
     required this.usernameController,
   });
 
@@ -58,7 +58,7 @@ class CustomPersonalInformation extends StatelessWidget {
 
         SizedBox(height: 10.h),
         CustomEditTextFiel(
-          phoneController: phoneController,
+          emailController: emailController,
           usernameController: usernameController,
         )
       ],

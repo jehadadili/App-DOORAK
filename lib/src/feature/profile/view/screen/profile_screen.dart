@@ -14,8 +14,15 @@ class UserProfileScreen extends StatefulWidget {
 }
 
 class _UserProfileScreenState extends State<UserProfileScreen> {
-  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
+  @override
+  void dispose() {
+    emailController.dispose();
+    usernameController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +39,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                   height: 400.h,
                   color: Theme.of(context).cardColor,
                   child: CustomPersonalInformation(
-                    phoneController: phoneController,
+                    emailController: emailController,
                     usernameController: usernameController,
                   ),
                 ),

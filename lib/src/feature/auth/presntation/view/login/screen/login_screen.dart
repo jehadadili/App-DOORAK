@@ -17,12 +17,12 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
   void dispose() {
-    phoneController.dispose();
+    emailController.dispose();
     passwordController.dispose();
     super.dispose();
   }
@@ -51,9 +51,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Column(
                     children: [
+                      Text(AppText.loginInfoEN,
+                          textAlign: TextAlign.center,
+                          style:
+                              Theme.of(context).primaryTextTheme.titleMedium),
+                      SizedBox(height: 20.h),
                       LoginInfoCard(
                         passwordController: passwordController,
-                        phoneController: phoneController,
+                        emailController: emailController,
                       ),
                       SizedBox(height: 30.h),
                       CustomButtomLight(

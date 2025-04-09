@@ -16,11 +16,21 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
-  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmpasswordController =
       TextEditingController();
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    usernameController.dispose();
+    confirmpasswordController.dispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +61,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   children: [
                     RegisterInfoCard(
                       passwordController: passwordController,
-                      phoneController: phoneController,
+                      emailController: emailController,
                       usernameController: usernameController,
                       confirmpasswordController: confirmpasswordController,
                     ),
