@@ -35,7 +35,7 @@ class _ActionButtonsState extends State<ActionButtons> {
       children: [
         Row(
           children: [
-            Expanded(
+            const Expanded(
               child: ButtonWidget(
                 text: AppText.cancelEN,
                 color: ColorApp.greydark,
@@ -47,8 +47,8 @@ class _ActionButtonsState extends State<ActionButtons> {
                 onTap: () {
                   _confettiController.play();
                 },
-                child: ButtonWidget(
-                  text: "Confirm",
+                child: const ButtonWidget(
+                  text: AppText.confirmEN,
                   color: ColorApp.primarycolor,
                 ),
               ),
