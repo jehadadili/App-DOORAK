@@ -15,5 +15,7 @@ void main() async {
   );
   Bloc.observer = MyBlocObserver();
   await CasheHelper.init();
-  runApp(const AppDoorak());
+    final supabaseClient = Supabase.instance.client;
+
+  runApp(AppDoorak(supabaseClient: supabaseClient));
 }

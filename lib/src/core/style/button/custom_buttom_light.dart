@@ -8,7 +8,7 @@ class CustomButtomLight extends StatelessWidget {
     required this.text,
     this.onPressed,
     required this.horizontal,
-    this.backgroundColor, // معامل لون الزر الجديد
+    this.backgroundColor, SizedBox? child, // معامل لون الزر الجديد
   });
 
   final String text;

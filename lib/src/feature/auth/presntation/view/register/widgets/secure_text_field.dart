@@ -28,59 +28,56 @@ class _SecureTextFieldState extends State<SecureTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 17.w),
-      child: Column(
-        children: [
-          CustomTextFieldWidgets(
-            obscureText: !isVisible,
-            height: 40,
-            labelText: AppText.labelPasswordEN,
-            prefixIcon: const Icon(IconApp.lock),
-            controller: widget.passwordController,
-            hintText: AppText.hintPasswordEN,
-            keyboardType: TextInputType.visiblePassword,
-            validator: (p0) {
-              return null;
+    return Column(
+      children: [
+        CustomTextFieldWidgets(
+          obscureText: !isVisible,
+          height: 40,
+          labelText: AppText.labelPasswordEN,
+          prefixIcon: const Icon(IconApp.lock),
+          controller: widget.passwordController,
+          hintText: AppText.hintPasswordEN,
+          keyboardType: TextInputType.visiblePassword,
+          validator: (p0) {
+            return null;
+          },
+          suffixIcon: IconButton(
+            onPressed: () {
+              setState(() {
+                isVisible = !isVisible;
+              });
             },
-            suffixIcon: IconButton(
-              onPressed: () {
-                setState(() {
-                  isVisible = !isVisible;
-                });
-              },
-              icon: isVisible
-                  ? const Icon(Icons.visibility)
-                  : const Icon(Icons.visibility_off),
-            ),
+            icon: isVisible
+                ? const Icon(Icons.visibility)
+                : const Icon(Icons.visibility_off),
           ),
-          SizedBox(
-            height: 8.h,
-          ),
-          CustomTextFieldWidgets(
-            obscureText: !isVisiblec,
-            height: 40,
-            labelText: AppText.confirmChangesEN,
-            prefixIcon: const Icon(IconApp.lock),
-            controller: widget.confirmpasswordController,
-            hintText: AppText.confirmChangesEN,
-            keyboardType: TextInputType.visiblePassword,
-            validator: (p0) {
-              return null;
+        ),
+        SizedBox(
+          height: 8.h,
+        ),
+        CustomTextFieldWidgets(
+          obscureText: !isVisiblec,
+          height: 40,
+          labelText: AppText.confirmChangesEN,
+          prefixIcon: const Icon(IconApp.lock),
+          controller: widget.confirmpasswordController,
+          hintText: AppText.confirmChangesEN,
+          keyboardType: TextInputType.visiblePassword,
+          validator: (p0) {
+            return null;
+          },
+          suffixIcon: IconButton(
+            onPressed: () {
+              setState(() {
+                isVisiblec = !isVisiblec;
+              });
             },
-            suffixIcon: IconButton(
-              onPressed: () {
-                setState(() {
-                  isVisiblec = !isVisiblec;
-                });
-              },
-              icon: isVisiblec
-                  ? const Icon(Icons.visibility)
-                  : const Icon(Icons.visibility_off),
-            ),
+            icon: isVisiblec
+                ? const Icon(Icons.visibility)
+                : const Icon(Icons.visibility_off),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

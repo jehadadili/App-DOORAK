@@ -20,19 +20,19 @@ class RegisterInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          height: 10.h,
-        ),
-        Text(AppText.createregisterEN,
-            style: Theme.of(context).primaryTextTheme.titleMedium),
-        SizedBox(
-          height: 20.h,
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 17.w),
-          child: CustomTextFieldWidgets(
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 17.w),
+      child: Column(
+        children: [
+          SizedBox(
+            height: 10.h,
+          ),
+          Text(AppText.createregisterEN,
+              style: Theme.of(context).primaryTextTheme.titleMedium),
+          SizedBox(
+            height: 20.h,
+          ),
+          CustomTextFieldWidgets(
             height: 40,
             labelText: AppText.labelUsernameEN,
             controller: usernameController,
@@ -42,11 +42,10 @@ class RegisterInfoCard extends StatelessWidget {
               return null;
             },
           ),
-        ),
-        SizedBox(
-          height: 8.h,
-        ),
-         CustomTextFieldWidgets(
+          SizedBox(
+            height: 8.h,
+          ),
+          CustomTextFieldWidgets(
             height: 40,
             labelText: AppText.labelemailEN,
             prefixIcon: const Icon(IconApp.email),
@@ -57,14 +56,15 @@ class RegisterInfoCard extends StatelessWidget {
               return null;
             },
           ),
-        SizedBox(
-          height: 8.h,
-        ),
-        SecureTextField(
-          passwordController: passwordController,
-          confirmpasswordController: confirmpasswordController,
-        ),
-      ],
+          SizedBox(
+            height: 8.h,
+          ),
+          SecureTextField(
+            passwordController: passwordController,
+            confirmpasswordController: confirmpasswordController,
+          ),
+        ],
+      ),
     );
   }
 }
