@@ -1,7 +1,6 @@
 import 'package:doorak/src/core/style/color/color_app.dart';
 import 'package:doorak/src/core/widgets/custom_border.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextFieldWidgets extends StatelessWidget {
   const CustomTextFieldWidgets({
@@ -32,7 +31,7 @@ class CustomTextFieldWidgets extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? MediaQuery.sizeOf(context).width,
-      height: height.h,
+      height: height,
       child: TextFormField(
         autovalidateMode: AutovalidateMode.onUserInteraction,
         style: Theme.of(context)
@@ -58,12 +57,7 @@ class CustomTextFieldWidgets extends StatelessWidget {
           ),
           errorBorder: CustomBorder.defaultBorder(
             color: ColorApp.red,
-            width: 1,
-            radius: 6,
-          ),
-          focusedErrorBorder: CustomBorder.defaultBorder(
-            color: ColorApp.red,
-            width: 1,
+            width: 2,
             radius: 6,
           ),
 

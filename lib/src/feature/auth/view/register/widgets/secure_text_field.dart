@@ -1,15 +1,17 @@
 import 'package:doorak/src/core/style/text/text.dart';
+import 'package:doorak/src/core/validator/validater.dart';
 import 'package:doorak/src/core/widgets/custom_text_fiald.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../core/style/icon/icon_app.dart';
+import '../../../../../core/style/icon/icon_app.dart';
 
 class SecureTextField extends StatefulWidget {
-  const SecureTextField(
-      {super.key,
-      required this.passwordController,
-      required this.confirmpasswordController});
+  const SecureTextField({
+    super.key,
+    required this.passwordController,
+    required this.confirmpasswordController,
+  });
   final TextEditingController passwordController;
   final TextEditingController confirmpasswordController;
   @override
@@ -32,14 +34,14 @@ class _SecureTextFieldState extends State<SecureTextField> {
       children: [
         CustomTextFieldWidgets(
           obscureText: !isVisible,
-          height: 40,
+          height: 60,
           labelText: AppText.labelPasswordEN,
           prefixIcon: const Icon(IconApp.lock),
           controller: widget.passwordController,
           hintText: AppText.hintPasswordEN,
           keyboardType: TextInputType.visiblePassword,
-          validator: (p0) {
-            return null;
+          validator: (password) {
+            return MyValidator.passwrdValidator(password);
           },
           suffixIcon: IconButton(
             onPressed: () {
@@ -57,14 +59,14 @@ class _SecureTextFieldState extends State<SecureTextField> {
         ),
         CustomTextFieldWidgets(
           obscureText: !isVisiblec,
-          height: 40,
+          height: 60,
           labelText: AppText.confirmChangesEN,
           prefixIcon: const Icon(IconApp.lock),
           controller: widget.confirmpasswordController,
           hintText: AppText.confirmChangesEN,
           keyboardType: TextInputType.visiblePassword,
-          validator: (p0) {
-            return null;
+          validator: (password) {
+            return MyValidator.passwrdValidator(password);
           },
           suffixIcon: IconButton(
             onPressed: () {

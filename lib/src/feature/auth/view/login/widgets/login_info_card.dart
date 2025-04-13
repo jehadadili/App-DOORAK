@@ -1,7 +1,8 @@
 import 'package:doorak/src/core/style/icon/icon_app.dart';
 import 'package:doorak/src/core/style/text/text.dart';
+import 'package:doorak/src/core/validator/validater.dart';
 import 'package:doorak/src/core/widgets/custom_text_fiald.dart';
-import 'package:doorak/src/feature/auth/presntation/view/login/widgets/password_text_field.dart';
+import 'package:doorak/src/feature/auth/view/login/widgets/password_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,14 +22,14 @@ class LoginInfoCard extends StatelessWidget {
       child: Column(
         children: [
           CustomTextFieldWidgets(
-            height: 40,
+            height: 60,
             labelText: AppText.labelemailEN,
             prefixIcon: const Icon(IconApp.email),
             controller: emailController,
             hintText: AppText.hintemailEN,
             keyboardType: TextInputType.emailAddress,
-            validator: (p0) {
-              return null;
+            validator: (email) {
+              return MyValidator.emalValidator(email);
             },
           ),
           SizedBox(height: 8.h),

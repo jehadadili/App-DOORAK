@@ -1,6 +1,6 @@
 import 'package:doorak/src/core/style/button/custom_buttom_light.dart';
 import 'package:doorak/src/core/style/color/color_app.dart';
-import 'package:doorak/src/feature/auth/presntation/view/register/widgets/secure_text_field.dart';
+import 'package:doorak/src/feature/auth/view/register/widgets/secure_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

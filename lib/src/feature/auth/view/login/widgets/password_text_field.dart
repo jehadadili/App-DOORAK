@@ -1,6 +1,7 @@
 import 'package:doorak/src/core/extension/extension_navgter.dart';
 import 'package:doorak/src/core/style/icon/icon_app.dart';
 import 'package:doorak/src/core/style/text/text.dart';
+import 'package:doorak/src/core/validator/validater.dart';
 import 'package:doorak/src/core/widgets/custom_text_fiald.dart';
 import 'package:doorak/src/feature/forgot_password/presntation/view/screen/forgot_password_screen.dart';
 import 'package:flutter/material.dart';
@@ -33,19 +34,18 @@ class _PassWordTextFieldState extends State<PassWordTextField> {
       children: [
         CustomTextFieldWidgets(
           obscureText: !isVisible,
-          height: 40,
+          height: 60,
           labelText: AppText.labelPasswordEN,
           prefixIcon: const Icon(IconApp.lock),
           controller: widget.passwordController,
           hintText: AppText.hintPasswordEN,
           keyboardType: TextInputType.visiblePassword,
-          validator: (p0) {
-            return null;
+          validator: (password) {
+            return MyValidator.passwrdValidator(password);
           },
         ),
-        SizedBox(height: 6.h),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5.w),
+          padding: EdgeInsets.symmetric(horizontal: 2.w),
           child: FittedBox(
             child: Row(
               children: [

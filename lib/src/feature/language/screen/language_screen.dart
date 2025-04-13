@@ -1,5 +1,5 @@
 import 'package:doorak/src/core/extension/extension_navgter.dart';
-import 'package:doorak/src/feature/auth/presntation/view/login/screen/login_screen.dart';
+import 'package:doorak/src/feature/auth/view/login/screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

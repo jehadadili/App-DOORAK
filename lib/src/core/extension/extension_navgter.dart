@@ -5,7 +5,7 @@ extension ExtensionNavgter on BuildContext {
     return Navigator.push(this, MaterialPageRoute(builder: (context) => push));
   }
 
-  Future<dynamic> pushReplacement({required Widget pushReplacement}) {
+  Future<dynamic> pushReplacement( {required Widget pushReplacement}) {
     return Navigator.pushReplacement(
         this, MaterialPageRoute(builder: (context) => pushReplacement));
   }

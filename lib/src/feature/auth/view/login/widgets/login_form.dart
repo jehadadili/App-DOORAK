@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:doorak/src/feature/auth/presntation/view/login/widgets/login_info_card.dart';
+import 'package:doorak/src/feature/auth/view/login/widgets/login_info_card.dart';
 
 class LoginForm extends StatelessWidget {
   final TextEditingController emailController;
